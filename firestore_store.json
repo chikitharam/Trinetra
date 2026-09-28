@@ -1,0 +1,3066 @@
+{
+  "threats": {
+    "threat_3d482cc75a43f23e": {
+      "id": "threat_3d482cc75a43f23e",
+      "title": "Fake Internship Scam",
+      "description": "Scammers target students with fraudulent remote internship opportunities, requesting 'training fees' or sending malware-laden application packets via WhatsApp and Telegram.",
+      "threat_type": "Employment Fraud / Phishing",
+      "severity": "HIGH",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.98
+        },
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.65
+        }
+      ],
+      "attack_method": "Social Engineering / Upfront Fee Demands",
+      "platform": [
+        "WhatsApp",
+        "Telegram",
+        "LinkedIn"
+      ],
+      "region": "National",
+      "language": "English",
+      "keywords": [
+        "internship",
+        "stipend",
+        "registration fee",
+        "fake job",
+        "student scam"
+      ],
+      "indicators": [
+        "Demands registration fee before interview",
+        "Unverified company web domain",
+        "Urgent deadline pressure"
+      ],
+      "how_to_identify": [
+        "Check if company domain matches official website",
+        "Never pay money to get a job or internship",
+        "Verify recruiter on LinkedIn"
+      ],
+      "what_to_do": [
+        "Refuse payment immediately",
+        "Block the contact number",
+        "Report to college placement portal and National Cyber Crime Helpline"
+      ],
+      "prevention_tips": [
+        "Apply only through verified career portals like Internshala, LinkedIn, or official company sites",
+        "Cross-verify HR contacts"
+      ],
+      "source": "TRINETRA Student Threat Intelligence",
+      "source_url": "https://cybercrime.gov.in/student-advisory-internship",
+      "published_date": "2026-09-27T07:05:22.759768",
+      "last_updated": "2026-09-27T07:05:22.759768",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_a4edc2e15afa9717": {
+      "id": "threat_a4edc2e15afa9717",
+      "title": "Fake Scholarship Website Scam",
+      "description": "Deceptive websites mimicking government and private educational trusts harvest students' Aadhaar, PAN, identity documents, and banking credentials under the guise of scholarship applications.",
+      "threat_type": "Identity Theft / Phishing",
+      "severity": "CRITICAL",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Typosquatting & Fake Registration Forms",
+      "platform": [
+        "Web",
+        "SMS",
+        "WhatsApp"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "scholarship",
+        "education fund",
+        "free grant",
+        "student aid",
+        "aadhaar leak"
+      ],
+      "indicators": [
+        "URL uses suspicious TLD (.xyz, .top, .info)",
+        "Asks for bank account PIN or net banking password",
+        "Spelling errors on site"
+      ],
+      "how_to_identify": [
+        "Official government scholarship portals end in .gov.in or .edu.in",
+        "Scholarships never require application fee via UPI"
+      ],
+      "what_to_do": [
+        "Do not submit identity documents on unverified portals",
+        "Change compromised passwords immediately"
+      ],
+      "prevention_tips": [
+        "Use National Scholarship Portal (scholarships.gov.in) exclusively for government grants"
+      ],
+      "source": "CERT-In Education Security Alert",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.765561",
+      "last_updated": "2026-09-27T07:05:22.765561",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_f3fe5a827a922eee": {
+      "id": "threat_f3fe5a827a922eee",
+      "title": "Fake Campus Placement Scam",
+      "description": "Cybercriminals impersonate top IT and consulting firms, issuing forged appointment letters to graduating students and demanding 'refundable security deposits'.",
+      "threat_type": "Placement Fraud / Impersonation",
+      "severity": "HIGH",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.97
+        }
+      ],
+      "attack_method": "Spoofed Offer Letters & Vishing Calls",
+      "platform": [
+        "Email",
+        "Phone Call",
+        "WhatsApp"
+      ],
+      "region": "National",
+      "language": "English",
+      "keywords": [
+        "campus placement",
+        "offer letter",
+        "security deposit",
+        "hr fraud",
+        "fake hiring"
+      ],
+      "indicators": [
+        "Email sent from free public email providers (@gmail.com)",
+        "Demands deposit for laptop allocation",
+        "No formal interview held"
+      ],
+      "how_to_identify": [
+        "Reputable enterprise employers never demand candidate security deposits",
+        "Verify offer letter with college placement cell"
+      ],
+      "what_to_do": [
+        "Do not send any funds",
+        "Forward spoofed offer letter to college placement officers"
+      ],
+      "prevention_tips": [
+        "Confirm all placement communications directly with your institute placement head"
+      ],
+      "source": "TRINETRA Student Advisory",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.769733",
+      "last_updated": "2026-09-27T07:05:22.769733",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_665f4359c98a33b1": {
+      "id": "threat_665f4359c98a33b1",
+      "title": "Fake Part-Time Job Scam",
+      "description": "WhatsApp and SMS messages promise students \u20b92,000\u2013\u20b95,000 daily for simple tasks like 'liking YouTube videos' or 'reviewing hotels', leading to task-based financial extortion.",
+      "threat_type": "Task-Based Financial Fraud",
+      "severity": "HIGH",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.95
+        },
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.7
+        }
+      ],
+      "attack_method": "Prepaid Task Trap / Telegram Investment Scheme",
+      "platform": [
+        "WhatsApp",
+        "Telegram",
+        "Instagram"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "part time job",
+        "youtube like scam",
+        "work from home",
+        "daily earning",
+        "telegram task"
+      ],
+      "indicators": [
+        "Initial small payment made to build trust, followed by demand for \u20b910,000+ investment",
+        "Group admins pressuring for funds"
+      ],
+      "how_to_identify": [
+        "Unsolicited part-time job offers on messaging apps are almost always fraudulent",
+        "High returns promised for trivial effort"
+      ],
+      "what_to_do": [
+        "Stop engaging immediately",
+        "Do not deposit money into 'prepaid tasks'"
+      ],
+      "prevention_tips": [
+        "Treat all unsolicited messaging app job offers as high-risk scams"
+      ],
+      "source": "National Cyber Crime Reporting Portal",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.775225",
+      "last_updated": "2026-09-27T07:05:22.775225",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_ade3d8e32b03c542": {
+      "id": "threat_ade3d8e32b03c542",
+      "title": "Exam Paper / Question Paper Scam",
+      "description": "Fraudulent Telegram channels and Instagram pages advertise leaked board or university exam papers in exchange for instant UPI payments.",
+      "threat_type": "Academic Fraud / UPI Theft",
+      "severity": "MEDIUM",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "Fake Sample Paper Selling via Telegram",
+      "platform": [
+        "Telegram",
+        "Instagram",
+        "UPI"
+      ],
+      "region": "National",
+      "language": "English / Regional",
+      "keywords": [
+        "exam paper leak",
+        "question paper scam",
+        "board exam",
+        "cbse leak",
+        "upi payment"
+      ],
+      "indicators": [
+        "Demands upfront payment before sending PDF",
+        "Sends blurred fake screenshots as proof",
+        "Deletes channel after receiving funds"
+      ],
+      "how_to_identify": [
+        "Official examination boards keep question papers secured; online leaks are scams"
+      ],
+      "what_to_do": [
+        "Do not send money",
+        "Report suspicious Telegram channels to exam board authorities"
+      ],
+      "prevention_tips": [
+        "Focus on official syllabus and authorized sample papers"
+      ],
+      "source": "TRINETRA Cyber Safety",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.782513",
+      "last_updated": "2026-09-27T07:05:22.782513",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_7ded03fb7a4a09e9": {
+      "id": "threat_7ded03fb7a4a09e9",
+      "title": "Fake Certification Course Scam",
+      "description": "Fake e-learning portals offer discounted professional certifications (Cybersecurity, AI, Data Science) but issue fake credentials and harvest student credit card details.",
+      "threat_type": "Credential Harvesting / Payment Fraud",
+      "severity": "MEDIUM",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.92
+        }
+      ],
+      "attack_method": "Spoofed E-Learning Advertisements",
+      "platform": [
+        "Facebook Ads",
+        "Instagram Ads",
+        "Web"
+      ],
+      "region": "Global / National",
+      "language": "English",
+      "keywords": [
+        "fake course",
+        "python certification",
+        "cyber course scam",
+        "discount course",
+        "card theft"
+      ],
+      "indicators": [
+        "Unbelievable discounts (99% off)",
+        "No verified instructor profiles",
+        "Non-secure HTTP checkout page"
+      ],
+      "how_to_identify": [
+        "Check if the institution is accredited or listed on platforms like Coursera/edX"
+      ],
+      "what_to_do": [
+        "Use virtual credit cards or verified payment gateways",
+        "Check domain age on Whois"
+      ],
+      "prevention_tips": [
+        "Enroll only through recognized universities and verified MOOC providers"
+      ],
+      "source": "TRINETRA Student Intelligence",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.786807",
+      "last_updated": "2026-09-27T07:05:22.786807",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_8b3bc5a59e9a0d72": {
+      "id": "threat_8b3bc5a59e9a0d72",
+      "title": "Student Loan / Education Loan Scam",
+      "description": "Predatory instant loan applications target students with easy approval promises, then harvest smartphone contacts and use blackmail for 500% interest repayment.",
+      "threat_type": "Predatory Loan App / Extortion",
+      "severity": "CRITICAL",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.98
+        }
+      ],
+      "attack_method": "Malicious Android APK Loan Apps",
+      "platform": [
+        "Android App Store",
+        "Third-party APKs",
+        "SMS"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "education loan",
+        "instant loan app",
+        "student credit",
+        "contact harvesting",
+        "blackmail app"
+      ],
+      "indicators": [
+        "App demands full access to Contacts, Gallery, and SMS",
+        "Instant approval without financial verification"
+      ],
+      "how_to_identify": [
+        "Check if loan app is RBI-registered or affiliated with a licensed bank"
+      ],
+      "what_to_do": [
+        "Uninstall malicious APK immediately",
+        "File report on Cybercrime portal if threatened"
+      ],
+      "prevention_tips": [
+        "Apply for education loans through official public/private banks or Vidya Lakshmi portal"
+      ],
+      "source": "RBI Cyber Security Guidelines",
+      "source_url": "https://rbi.org.in",
+      "published_date": "2026-09-27T07:05:22.791363",
+      "last_updated": "2026-09-27T07:05:22.791363",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_84c9c7913ff5f34b": {
+      "id": "threat_84c9c7913ff5f34b",
+      "title": "Fake University Admission Website",
+      "description": "Attackers register domain names similar to prestigious universities to collect admission fees and personal student records during admission seasons.",
+      "threat_type": "Domain Typosquatting / Financial Fraud",
+      "severity": "HIGH",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "Lookalike Domain Typosquatting",
+      "platform": [
+        "Web",
+        "Google Search Ads"
+      ],
+      "region": "National",
+      "language": "English",
+      "keywords": [
+        "university admission",
+        "fake college site",
+        "admission fee scam",
+        "college portal"
+      ],
+      "indicators": [
+        "Domain spelling differs by 1 letter (e.g., `univers1ty.ac.in`)",
+        "Direct payment link without student portal login"
+      ],
+      "how_to_identify": [
+        "Always verify exact college web domain from official university handbook"
+      ],
+      "what_to_do": [
+        "Do not submit payments",
+        "Report domain typosquatting to college IT department"
+      ],
+      "prevention_tips": [
+        "Bookmark verified university web pages"
+      ],
+      "source": "TRINETRA Education Defense",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.797127",
+      "last_updated": "2026-09-27T07:05:22.797127",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_7889a04c91338071": {
+      "id": "threat_7889a04c91338071",
+      "title": "Social Media Account Takeover",
+      "description": "Students receive messages from compromised friends' accounts asking to click a link or share an SMS verification code under the pretext of 'voting in a contest'.",
+      "threat_type": "Social Media Hijacking / Account Theft",
+      "severity": "HIGH",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.94
+        }
+      ],
+      "attack_method": "SMS OTP Relaying / Phishing Link",
+      "platform": [
+        "Instagram",
+        "Snapchat",
+        "WhatsApp"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "instagram hack",
+        "vote for me link",
+        "account takeover",
+        "otp theft",
+        "social hacking"
+      ],
+      "indicators": [
+        "Friend sends unexpected message asking for a code sent to your phone",
+        "Link leads to fake Instagram login"
+      ],
+      "how_to_identify": [
+        "Never share password reset or SMS verification codes with ANYONE"
+      ],
+      "what_to_do": [
+        "Enable Two-Factor Authentication (2FA) immediately",
+        "Report hacked account via official help center"
+      ],
+      "prevention_tips": [
+        "Use Authenticator Apps for 2FA instead of SMS"
+      ],
+      "source": "TRINETRA Student CTI",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.801638",
+      "last_updated": "2026-09-27T07:05:22.801638",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_b2b426747d8308dd": {
+      "id": "threat_b2b426747d8308dd",
+      "title": "Student Phishing Login Page",
+      "description": "Fake login portals replicating LMS (Canvas, Blackboard) or Student ERP systems capture student credentials to access academic files and tuition portals.",
+      "threat_type": "Credential Harvesting",
+      "severity": "HIGH",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.95
+        }
+      ],
+      "attack_method": "Spoofed LMS / University ERP Login",
+      "platform": [
+        "Email",
+        "Web"
+      ],
+      "region": "National",
+      "language": "English",
+      "keywords": [
+        "lms login scam",
+        "canvas phishing",
+        "student portal hack",
+        "erp password theft"
+      ],
+      "indicators": [
+        "Sender email address does not end in university domain",
+        "URL domain differs from institute portal"
+      ],
+      "how_to_identify": [
+        "Check web browser SSL certificate and exact URL bar before logging in"
+      ],
+      "what_to_do": [
+        "Change student password immediately if typed on suspicious site",
+        "Inform campus IT helpdesk"
+      ],
+      "prevention_tips": [
+        "Always access LMS via official institute website bookmarks"
+      ],
+      "source": "CERT-In Academic Alert",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.805746",
+      "last_updated": "2026-09-27T07:05:22.805746",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_9984af2ff2309978": {
+      "id": "threat_9984af2ff2309978",
+      "title": "Deepfake / Impersonation Scam",
+      "description": "AI voice cloning technology is used by cybercriminals to clone a classmate or relative's voice, calling students to ask for urgent bail or medical money.",
+      "threat_type": "AI Voice Cloning / Emotional Fraud",
+      "severity": "CRITICAL",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.93
+        },
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.9
+        }
+      ],
+      "attack_method": "Generative AI Voice Impersonation",
+      "platform": [
+        "Phone Call",
+        "WhatsApp Audio"
+      ],
+      "region": "Global",
+      "language": "English / Regional",
+      "keywords": [
+        "deepfake voice",
+        "ai voice scam",
+        "classmate emergency",
+        "voice cloning",
+        "urgent bail"
+      ],
+      "indicators": [
+        "Caller sounds like a friend but requests instant cash via unknown UPI ID",
+        "Caller panics if asked a personal question"
+      ],
+      "how_to_identify": [
+        "Hang up and call the friend back directly on their known phone number"
+      ],
+      "what_to_do": [
+        "Establish a personal 'safe word' with family and close friends for emergencies"
+      ],
+      "prevention_tips": [
+        "Never transfer money based solely on an incoming voice or audio message"
+      ],
+      "source": "TRINETRA AI Threat Lab",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.809880",
+      "last_updated": "2026-09-27T07:05:22.809880",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_59f272b068fc807a": {
+      "id": "threat_59f272b068fc807a",
+      "title": "Sextortion / Blackmail Scam",
+      "description": "Criminals initiate video calls or chats on social apps, record compromised footage using video manipulation, and demand instant extortion payments under threat of public release.",
+      "threat_type": "Cyber Blackmail / Extortion",
+      "severity": "CRITICAL",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Social Engineering / Video Chat Extortion",
+      "platform": [
+        "Instagram",
+        "WhatsApp",
+        "Video Chat Apps"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "sextortion",
+        "video call scam",
+        "blackmail",
+        "cyber extortion",
+        "nude call trap"
+      ],
+      "indicators": [
+        "Unsolicited video call from unknown contact",
+        "Immediate demand for money following call"
+      ],
+      "how_to_identify": [
+        "Do not accept video calls from unknown contacts on social media"
+      ],
+      "what_to_do": [
+        "DO NOT PAY MONEY. Paying leads to more extortion. Block contact, take screenshots, file report on Cybercrime portal 1930"
+      ],
+      "prevention_tips": [
+        "Keep social media profiles private and restrict unknown contact calls"
+      ],
+      "source": "National Cyber Crime Helpline 1930",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.813852",
+      "last_updated": "2026-09-27T07:05:22.813852",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_d5c297a66698d64c": {
+      "id": "threat_d5c297a66698d64c",
+      "title": "Malicious APK / Mod Application Scam",
+      "description": "Cracked study apps, free PDF readers, or modified game APKs distributed via Telegram contain Trojan spyware that silently records keystrokes and extracts banking OTPs.",
+      "threat_type": "Android Malware / Spyware",
+      "severity": "HIGH",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.95
+        }
+      ],
+      "attack_method": "Malicious Trojan APK Distribution",
+      "platform": [
+        "Telegram",
+        "Third-party websites",
+        "Android"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "mod apk",
+        "cracked study app",
+        "trojan spyware",
+        "free pdf app",
+        "android malware"
+      ],
+      "indicators": [
+        "App requests unnecessary Accessibility permissions",
+        "App not listed on Google Play Store"
+      ],
+      "how_to_identify": [
+        "Only install apps from Google Play Store or official vendor portals"
+      ],
+      "what_to_do": [
+        "Uninstall untrusted APKs immediately",
+        "Run Play Protect scan"
+      ],
+      "prevention_tips": [
+        "Disable 'Install from Unknown Sources' in Android security settings"
+      ],
+      "source": "CERT-In Mobile Security Advisory",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.817809",
+      "last_updated": "2026-09-27T07:05:22.817809",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_e0886229d7d1437f": {
+      "id": "threat_e0886229d7d1437f",
+      "title": "Gaming / Gaming Account Scam",
+      "description": "Phishing sites promising free in-game currency (BGMI UC, Valorant VP, Roblox Robux) or rare skins steal students' Steam, Riot, and Google credentials.",
+      "threat_type": "Gaming Credential Theft",
+      "severity": "MEDIUM",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.93
+        }
+      ],
+      "attack_method": "Free In-Game Currency Phishing",
+      "platform": [
+        "Discord",
+        "YouTube Comments",
+        "Web"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "gaming scam",
+        "free uc bgmi",
+        "valorant vp scam",
+        "steam login theft",
+        "discord phishing"
+      ],
+      "indicators": [
+        "Promises free in-game items for logging into steam/google account",
+        "Fake Discord bot messages"
+      ],
+      "how_to_identify": [
+        "Game publishers never offer free premium currency via third-party web forms"
+      ],
+      "what_to_do": [
+        "Change gaming account password and revoke active sessions"
+      ],
+      "prevention_tips": [
+        "Use Steam Guard / Two-Factor Authentication on all gaming accounts"
+      ],
+      "source": "TRINETRA Gaming Security",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.821723",
+      "last_updated": "2026-09-27T07:05:22.821723",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_386f57198277242a": {
+      "id": "threat_386f57198277242a",
+      "title": "Fake Freelancing / Work-from-Home Scam",
+      "description": "Fraudsters contact student freelancers offering graphic design, copywriting, or translation work, demanding a 'refundable portal registration deposit' before releasing work.",
+      "threat_type": "Freelance Escrow Fraud",
+      "severity": "MEDIUM",
+      "community": "STUDENT",
+      "target_communities": [
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.94
+        }
+      ],
+      "attack_method": "Spoofed Freelance Job Escrow",
+      "platform": [
+        "Telegram",
+        "Upwork Spoof",
+        "Fiverr Spoof"
+      ],
+      "region": "National",
+      "language": "English",
+      "keywords": [
+        "freelance scam",
+        "translation job fraud",
+        "copywriting scam",
+        "work deposit"
+      ],
+      "indicators": [
+        "Client redirects conversation from official freelance platform to Telegram",
+        "Demands deposit for project file decryption"
+      ],
+      "how_to_identify": [
+        "Never pay a client to receive work or get paid"
+      ],
+      "what_to_do": [
+        "Keep all communications on official freelance platform messaging"
+      ],
+      "prevention_tips": [
+        "Use official platform escrow protection systems"
+      ],
+      "source": "TRINETRA Student Defense",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.827038",
+      "last_updated": "2026-09-27T07:05:22.827038",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_e7c0592acd3ea3f7": {
+      "id": "threat_e7c0592acd3ea3f7",
+      "title": "Fake Bank Verification Call",
+      "description": "Vishing callers impersonating senior bank officers create urgency by claiming the victim's debit card or account is locked, persuading them to disclose their 6-digit OTP.",
+      "threat_type": "Vishing / OTP Theft",
+      "severity": "CRITICAL",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Phone Impersonation / Urgency Coercion",
+      "platform": [
+        "Phone Call"
+      ],
+      "region": "National",
+      "language": "Hindi / English / Regional",
+      "keywords": [
+        "bank call",
+        "card blocked",
+        "otp fraud",
+        "vishing",
+        "senior citizen scam"
+      ],
+      "indicators": [
+        "Caller asks for OTP received on your phone",
+        "Threatens immediate account suspension if not verified"
+      ],
+      "how_to_identify": [
+        "Banks NEVER call customers asking for OTP, PIN, or CVV"
+      ],
+      "what_to_do": [
+        "Disconnect the call immediately",
+        "Do not share any numbers sent to your mobile"
+      ],
+      "prevention_tips": [
+        "Save your official bank customer care number from your passbook/debit card"
+      ],
+      "source": "RBI Financial Literacy Bureau",
+      "source_url": "https://rbi.org.in",
+      "published_date": "2026-09-27T07:05:22.831508",
+      "last_updated": "2026-09-27T07:05:22.831508",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_029f69674a07518f": {
+      "id": "threat_029f69674a07518f",
+      "title": "UPI OTP Scam",
+      "description": "Fraudsters claim they want to send money to the senior citizen (e.g. for rent, old furniture, or pension), but send a 'Request Money' UPI link asking the victim to enter their UPI PIN.",
+      "threat_type": "UPI Fraud / Reverse Pay Trap",
+      "severity": "CRITICAL",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.98
+        },
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.85
+        }
+      ],
+      "attack_method": "UPI 'Collect Money' Request Exploitation",
+      "platform": [
+        "Google Pay",
+        "PhonePe",
+        "Paytm",
+        "WhatsApp"
+      ],
+      "region": "National",
+      "language": "Hindi / English / Regional",
+      "keywords": [
+        "upi pin",
+        "gpay scam",
+        "receive money pin",
+        "phonepe fraud",
+        "money transfer trap"
+      ],
+      "indicators": [
+        "Caller says 'Enter your UPI PIN to RECEIVE money in your bank account'"
+      ],
+      "how_to_identify": [
+        "GOLDEN RULE: You NEVER enter your UPI PIN to RECEIVE money"
+      ],
+      "what_to_do": [
+        "Decline the UPI collect request",
+        "Block the fraudulent caller"
+      ],
+      "prevention_tips": [
+        "Remember that entering a UPI PIN always DEDUCTS money from your account"
+      ],
+      "source": "NPCI Cyber Safety Advisory",
+      "source_url": "https://www.npci.org.in",
+      "published_date": "2026-09-27T07:05:22.835511",
+      "last_updated": "2026-09-27T07:05:22.835511",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_e2c7b39541236c3b": {
+      "id": "threat_e2c7b39541236c3b",
+      "title": "Fake KYC Update Scam",
+      "description": "SMS messages warn senior citizens that their bank account, SIM card, or wallet will be blocked within 24 hours unless they update KYC via a malicious link.",
+      "threat_type": "Smishing / Phishing",
+      "severity": "HIGH",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.97
+        }
+      ],
+      "attack_method": "SMS Link Phishing / Fake KYC Portal",
+      "platform": [
+        "SMS",
+        "WhatsApp"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "kyc update",
+        "account suspended",
+        "sim kyc",
+        "bank sms",
+        "phishing link"
+      ],
+      "indicators": [
+        "SMS contains personal mobile number or bit.ly link",
+        "Creates extreme panic about 24h deadline"
+      ],
+      "how_to_identify": [
+        "Official bank SMS headers use registered sender IDs (e.g., `AX-HDFCBK`)"
+      ],
+      "what_to_do": [
+        "Do not click the link",
+        "Visit your nearest physical bank branch to verify KYC status"
+      ],
+      "prevention_tips": [
+        "Complete KYC updates only in person at bank branches or via official bank apps"
+      ],
+      "source": "CERT-In Smishing Alert",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.839605",
+      "last_updated": "2026-09-27T07:05:22.839605",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_e2e02ee04ce8b760": {
+      "id": "threat_e2e02ee04ce8b760",
+      "title": "Fake Tech Support Scam",
+      "description": "Browser pop-ups show alarming warnings claiming 'Your Computer is Infected with Virus' with a toll-free number connecting to bogus support agents who demand remote access.",
+      "threat_type": "Remote Access Fraud / Tech Support Scam",
+      "severity": "HIGH",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "Browser Pop-up Lockscreen / Phone Scam",
+      "platform": [
+        "Web Browser",
+        "Phone Call"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "tech support scam",
+        "virus pop-up",
+        "microsoft call",
+        "computer locked",
+        "remote support"
+      ],
+      "indicators": [
+        "Loud alert sound on browser",
+        "Asks to call a toll-free support number immediately"
+      ],
+      "how_to_identify": [
+        "Microsoft, Apple, and anti-virus companies never display phone numbers in pop-ups"
+      ],
+      "what_to_do": [
+        "Close the web browser or restart your computer",
+        "Do not call the displayed number"
+      ],
+      "prevention_tips": [
+        "Use reputable ad-blockers and updated antivirus software"
+      ],
+      "source": "TRINETRA Senior Protection",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.844312",
+      "last_updated": "2026-09-27T07:05:22.844312",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_37d310cd809471f2": {
+      "id": "threat_37d310cd809471f2",
+      "title": "Pension Fraud",
+      "description": "Scammers impersonate pension department officials, calling retired citizens to ask for biometric/Aadhaar verification or charging fake 'Life Certificate processing fees'.",
+      "threat_type": "Pension Impersonation / Extortion",
+      "severity": "CRITICAL",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Government Official Vishing",
+      "platform": [
+        "Phone Call",
+        "SMS"
+      ],
+      "region": "National",
+      "language": "Hindi / English / Regional",
+      "keywords": [
+        "pension scam",
+        "life certificate",
+        "jeevan pramaan",
+        "treasury call",
+        "pensioner fraud"
+      ],
+      "indicators": [
+        "Demands fee for submitting Jeevan Pramaan online",
+        "Asks for pension account number and OTP"
+      ],
+      "how_to_identify": [
+        "Digital Life Certificate (Jeevan Pramaan) is free on official government portals"
+      ],
+      "what_to_do": [
+        "Disconnect call",
+        "Submit Life Certificate via official Jeevan Pramaan app or bank branch"
+      ],
+      "prevention_tips": [
+        "Contact local pension treasury office directly for pension queries"
+      ],
+      "source": "Department of Pensioners' Welfare",
+      "source_url": "https://pensionersportal.gov.in",
+      "published_date": "2026-09-27T07:05:22.848400",
+      "last_updated": "2026-09-27T07:05:22.848400",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_7ac16895247177c4": {
+      "id": "threat_7ac16895247177c4",
+      "title": "Investment / Trading Scam",
+      "description": "WhatsApp and Telegram groups promise senior citizens guaranteed 300% monthly returns on stock trading or IPO allotments, draining life savings into fake trading portals.",
+      "threat_type": "Ponzi Investment / Trading Fraud",
+      "severity": "CRITICAL",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.98
+        },
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.75
+        }
+      ],
+      "attack_method": "Fake Stock Trading Web Portals",
+      "platform": [
+        "WhatsApp",
+        "Telegram",
+        "Fake Web Apps"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "trading scam",
+        "guaranteed return",
+        "stock market tips",
+        "ipo allotment scam",
+        "whatsapp investment"
+      ],
+      "indicators": [
+        "Promises fixed guaranteed returns without market risk",
+        "Requires depositing funds into personal bank accounts"
+      ],
+      "how_to_identify": [
+        "SEBI-registered brokers never solicit investments via WhatsApp groups"
+      ],
+      "what_to_do": [
+        "Stop transferring funds",
+        "Report SEBI unregistered entities to Cybercrime 1930"
+      ],
+      "prevention_tips": [
+        "Invest only through SEBI-registered brokers and official mutual fund houses"
+      ],
+      "source": "SEBI Investor Advisory",
+      "source_url": "https://www.sebi.gov.in",
+      "published_date": "2026-09-27T07:05:22.852637",
+      "last_updated": "2026-09-27T07:05:22.852637",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_947392aaa86fff30": {
+      "id": "threat_947392aaa86fff30",
+      "title": "Fake Insurance Renewal Scam",
+      "description": "Impersonators pose as insurance agents, claiming an old lapsed policy has accumulated \u20b95 Lakhs maturity bonus that can be released after paying a small tax processing fee.",
+      "threat_type": "Insurance Fraud / Advance Fee Scam",
+      "severity": "HIGH",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.95
+        }
+      ],
+      "attack_method": "Advance Fee Extortion Vishing",
+      "platform": [
+        "Phone Call",
+        "WhatsApp"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "insurance bonus",
+        "lic maturity scam",
+        "lapsed policy fraud",
+        "insurance refund"
+      ],
+      "indicators": [
+        "Claims huge unreleased bonus on lapsed policy",
+        "Demands advance fee into private account"
+      ],
+      "how_to_identify": [
+        "IRDAI and insurance companies never demand fee payment to private accounts"
+      ],
+      "what_to_do": [
+        "Verify policy status directly on official insurance provider portal"
+      ],
+      "prevention_tips": [
+        "Never pay fees to personal bank accounts for policy bonuses"
+      ],
+      "source": "IRDAI Consumer Protection",
+      "source_url": "https://irdai.gov.in",
+      "published_date": "2026-09-27T07:05:22.858715",
+      "last_updated": "2026-09-27T07:05:22.858715",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_184dba6887bbc64e": {
+      "id": "threat_184dba6887bbc64e",
+      "title": "Romance Scam",
+      "description": "Fraudsters build romantic or emotional trust with lonely senior citizens over months on social platforms, eventually inventing urgent medical or travel crises to request funds.",
+      "threat_type": "Social Engineering / Financial Exploitation",
+      "severity": "HIGH",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.94
+        }
+      ],
+      "attack_method": "Long-term Emotional Manipulation",
+      "platform": [
+        "Facebook",
+        "Matrimonial Sites",
+        "WhatsApp"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "romance scam",
+        "online friendship fraud",
+        "overseas gift scam",
+        "emotional extortion"
+      ],
+      "indicators": [
+        "Person claims to live overseas",
+        "Asks for money for custom clearance or emergency surgery"
+      ],
+      "how_to_identify": [
+        "Never send money to someone you have only met online"
+      ],
+      "what_to_do": [
+        "Consult family members or trusted friends before sending money online"
+      ],
+      "prevention_tips": [
+        "Perform reverse image search on online profile photos"
+      ],
+      "source": "TRINETRA Senior Protection",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.864195",
+      "last_updated": "2026-09-27T07:05:22.864195",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_5332e1e457cff4b3": {
+      "id": "threat_5332e1e457cff4b3",
+      "title": "Fake Government Scheme Scam",
+      "description": "Messages advertise fake senior citizen pension subsidies, free healthcare cards, or festival grants requiring a small online registration processing fee.",
+      "threat_type": "Government Scheme Phishing",
+      "severity": "MEDIUM",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.96
+        },
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.88
+        }
+      ],
+      "attack_method": "WhatsApp Message Distribution",
+      "platform": [
+        "WhatsApp",
+        "SMS",
+        "Web"
+      ],
+      "region": "National",
+      "language": "Hindi / Regional",
+      "keywords": [
+        "government scheme",
+        "pm subsidy",
+        "senior grant",
+        "free healthcare card",
+        "scheme registration"
+      ],
+      "indicators": [
+        "Link leads to unofficial website (not ending in `.gov.in`)",
+        "Asks for registration fee via UPI"
+      ],
+      "how_to_identify": [
+        "Genuine welfare schemes are listed on official `.gov.in` websites"
+      ],
+      "what_to_do": [
+        "Do not share banking details or pay registration fees"
+      ],
+      "prevention_tips": [
+        "Verify scheme details at local municipal or district government offices"
+      ],
+      "source": "PIB Fact Check Advisory",
+      "source_url": "https://pib.gov.in",
+      "published_date": "2026-09-27T07:05:22.868153",
+      "last_updated": "2026-09-27T07:05:22.868153",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_4264100555408c23": {
+      "id": "threat_4264100555408c23",
+      "title": "Fake Electricity Bill Scam",
+      "description": "SMS alert received at night: 'Dear customer, your electricity will be disconnected at 9:30 PM due to unpaid bill. Call officer at XXXXX.' Fraudsters induce panic to steal money.",
+      "threat_type": "Utility Fraud / Vishing",
+      "severity": "CRITICAL",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.98
+        },
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.95
+        }
+      ],
+      "attack_method": "Smishing Panic Induction",
+      "platform": [
+        "SMS",
+        "Phone Call"
+      ],
+      "region": "National",
+      "language": "Hindi / English / Regional",
+      "keywords": [
+        "electricity bill scam",
+        "power disconnection",
+        "bijli bill",
+        "utility scam",
+        "night power cut"
+      ],
+      "indicators": [
+        "SMS contains personal mobile number instead of official electricity board ID",
+        "Urgent night cut threat"
+      ],
+      "how_to_identify": [
+        "Electricity boards never disconnect power instantly via SMS notice"
+      ],
+      "what_to_do": [
+        "Do not call the mobile number in the SMS",
+        "Check bill status on official utility app"
+      ],
+      "prevention_tips": [
+        "Pay electricity bills through authorized electricity board counters or official apps"
+      ],
+      "source": "National Cyber Crime Reporting Portal",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.872499",
+      "last_updated": "2026-09-27T07:05:22.872499",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_9112fa01b18f8996": {
+      "id": "threat_9112fa01b18f8996",
+      "title": "Fake Courier / Parcel Scam",
+      "description": "Robocalls claim a parcel sent in the senior citizen's name containing illegal passports or drugs was seized by Customs / Police, demanding bribe payment via video call.",
+      "threat_type": "Digital Arrest / Impersonation Fraud",
+      "severity": "CRITICAL",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Digital Arrest Coercion / Police Spoofing",
+      "platform": [
+        "Phone Call",
+        "Skype / WhatsApp Video"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "digital arrest",
+        "courier scam",
+        "fedex scam",
+        "police call fraud",
+        "customs bribe"
+      ],
+      "indicators": [
+        "Caller claims to be Police/CBI and demands staying on video call ('Digital Arrest')",
+        "Asks to transfer money into 'verification account'"
+      ],
+      "how_to_identify": [
+        "No police officer or customs official has authority to execute 'digital arrest' over video call!"
+      ],
+      "what_to_do": [
+        "HANG UP IMMEDIATELY. Real police never demand online bank transfers over video calls."
+      ],
+      "prevention_tips": [
+        "Report digital arrest attempts to 1930 immediately"
+      ],
+      "source": "MHA Indian Cyber Crime Coordination Centre (I4C)",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.877767",
+      "last_updated": "2026-09-27T07:05:22.877767",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_6e91f0c8c79044d1": {
+      "id": "threat_6e91f0c8c79044d1",
+      "title": "Remote Access Application Scam",
+      "description": "Scammers convince senior citizens to install remote control software (AnyDesk, TeamViewer, QuickSupport) on their phone under the pretext of 'fixing mobile banking issues'.",
+      "threat_type": "Remote Access Hijacking",
+      "severity": "CRITICAL",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.98
+        }
+      ],
+      "attack_method": "Remote Desktop Software Exploitation",
+      "platform": [
+        "Phone Call",
+        "Android",
+        "iOS"
+      ],
+      "region": "Global",
+      "language": "English / Hindi",
+      "keywords": [
+        "anydesk scam",
+        "teamviewer fraud",
+        "quicksupport",
+        "remote access",
+        "screen sharing theft"
+      ],
+      "indicators": [
+        "Caller instructs you to download AnyDesk or QuickSupport and read out 9-digit code"
+      ],
+      "how_to_identify": [
+        "Sharing 9-digit code gives the caller FULL REMOTE CONTROL of your phone"
+      ],
+      "what_to_do": [
+        "NEVER install remote access apps during a call",
+        "Uninstall app immediately"
+      ],
+      "prevention_tips": [
+        "Do not download remote control software unless advised by trusted family in person"
+      ],
+      "source": "CERT-In Remote App Alert",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.882487",
+      "last_updated": "2026-09-27T07:05:22.882487",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_c2e9b2d79531b95d": {
+      "id": "threat_c2e9b2d79531b95d",
+      "title": "SIM Card / Mobile Number Deactivation Scam",
+      "description": "Calls threatening that the victim's mobile SIM card will be deactivated within 2 hours unless they pay \u20b910 for 'e-SIM verification' which drains their bank account.",
+      "threat_type": "SIM Swap / Vishing",
+      "severity": "HIGH",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "Telecom Provider Impersonation",
+      "platform": [
+        "Phone Call",
+        "SMS"
+      ],
+      "region": "National",
+      "language": "Hindi / English / Regional",
+      "keywords": [
+        "sim block",
+        "telecom scam",
+        "esim fraud",
+        "airtel jio scam",
+        "sim deactivation"
+      ],
+      "indicators": [
+        "Asks to pay \u20b910 recharge via link sent during call"
+      ],
+      "how_to_identify": [
+        "Telecom companies send written notices, not sudden phone threats"
+      ],
+      "what_to_do": [
+        "Hang up and visit official telecom store (Airtel, Jio, VI)"
+      ],
+      "prevention_tips": [
+        "Never perform financial transactions while on an incoming call"
+      ],
+      "source": "Department of Telecommunications (DoT)",
+      "source_url": "https://dot.gov.in",
+      "published_date": "2026-09-27T07:05:22.886515",
+      "last_updated": "2026-09-27T07:05:22.886515",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_1ead62b1c77fb9ef": {
+      "id": "threat_1ead62b1c77fb9ef",
+      "title": "Fake Customer Care Number Scam",
+      "description": "Fraudsters list fake customer service numbers on Google Search for banks, LPG cylinder providers, and online shopping apps to trap seniors looking for help.",
+      "threat_type": "Search Engine Poisoning / Vishing",
+      "severity": "HIGH",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.97
+        }
+      ],
+      "attack_method": "Google Search SEO Poisoning",
+      "platform": [
+        "Google Search",
+        "Phone Call"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "customer care scam",
+        "google search phone fraud",
+        "lpg helpline scam",
+        "fake bank number"
+      ],
+      "indicators": [
+        "Number found on unverified blog or Google Map listing",
+        "Agent asks for debit card details"
+      ],
+      "how_to_identify": [
+        "Always obtain customer care numbers directly from official apps or payment receipts"
+      ],
+      "what_to_do": [
+        "Do not call phone numbers shown in random Google Search results"
+      ],
+      "prevention_tips": [
+        "Save official helpline contacts of essential services in your phonebook"
+      ],
+      "source": "TRINETRA Senior Protection",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.890713",
+      "last_updated": "2026-09-27T07:05:22.890713",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_94ee8019e49010b1": {
+      "id": "threat_94ee8019e49010b1",
+      "title": "WhatsApp Family Impersonation Scam",
+      "description": "Messages sent from an unknown number: 'Hi Mum/Dad, I lost my phone, this is my new temporary number. I urgently need money to pay a medical/repair bill.'",
+      "threat_type": "Impersonation / Social Engineering",
+      "severity": "HIGH",
+      "community": "SENIOR_CITIZEN",
+      "target_communities": [
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.98
+        }
+      ],
+      "attack_method": "Family Member Impersonation",
+      "platform": [
+        "WhatsApp"
+      ],
+      "region": "Global",
+      "language": "English / Regional",
+      "keywords": [
+        "hi mum scam",
+        "family impersonation",
+        "new number scam",
+        "son daughter fraud",
+        "urgent transfer"
+      ],
+      "indicators": [
+        "Sender claims to be child/grandchild with a new number",
+        "Asks for immediate money transfer"
+      ],
+      "how_to_identify": [
+        "Always call your child's ORIGINAL phone number to verify!"
+      ],
+      "what_to_do": [
+        "Do not send money",
+        "Call your family member directly"
+      ],
+      "prevention_tips": [
+        "Establish a personal verbal passphrase for family financial emergencies"
+      ],
+      "source": "TRINETRA Senior Protection",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.895398",
+      "last_updated": "2026-09-27T07:05:22.895398",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_690aa8fa61b00efa": {
+      "id": "threat_690aa8fa61b00efa",
+      "title": "Invoice Fraud",
+      "description": "Attackers intercept vendor communications via email or spoofed domains, submitting modified invoices with altered bank routing and account numbers for pending business payments.",
+      "threat_type": "Payment Redirection / Invoice Manipulation",
+      "severity": "CRITICAL",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Man-in-the-Middle Email Interception",
+      "platform": [
+        "Email",
+        "PDF Documents"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "invoice fraud",
+        "bank account change",
+        "vendor payment scam",
+        "fake invoice",
+        "wire fraud"
+      ],
+      "indicators": [
+        "Sudden request to change vendor bank account details on an active invoice",
+        "Urgent request to bypass standard payment checks"
+      ],
+      "how_to_identify": [
+        "Verify any invoice bank detail changes by calling a known offline phone contact for the vendor"
+      ],
+      "what_to_do": [
+        "Halt payment immediately",
+        "Contact vendor via verified phone line"
+      ],
+      "prevention_tips": [
+        "Enforce mandatory 2-person verbal sign-off for vendor bank detail modifications"
+      ],
+      "source": "CERT-In Enterprise Security Advisory",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.899531",
+      "last_updated": "2026-09-27T07:05:22.899531",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_bacc42b1c2a66b77": {
+      "id": "threat_bacc42b1c2a66b77",
+      "title": "Vendor Impersonation",
+      "description": "Cybercriminals register domain names closely resembling legitimate suppliers (e.g., `suppl1er.com` instead of `supplier.com`) to request bulk payment releases.",
+      "threat_type": "Domain Spoofing / Impersonation",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.97
+        }
+      ],
+      "attack_method": "Typosquatted Vendor Email Domains",
+      "platform": [
+        "Email"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "vendor spoofing",
+        "domain typosquatting",
+        "supplier fraud",
+        "fake purchase order"
+      ],
+      "indicators": [
+        "Email address character substitution (1 instead of i, rn instead of m)",
+        "Sender pressures for fast processing"
+      ],
+      "how_to_identify": [
+        "Check full email header details and compare domain character by character"
+      ],
+      "what_to_do": [
+        "Block spoofed domain",
+        "Notify legitimate vendor IT team"
+      ],
+      "prevention_tips": [
+        "Configure SPF, DKIM, and DMARC record checks on business email gateways"
+      ],
+      "source": "TRINETRA Business CTI",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.903582",
+      "last_updated": "2026-09-27T07:05:22.903582",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_a262a8a216626e6d": {
+      "id": "threat_a262a8a216626e6d",
+      "title": "Business Email Compromise",
+      "description": "Sophisticated attackers gain unauthorized access to executive or finance email accounts, instructing junior accountants to execute high-value wire transfers to external accounts.",
+      "threat_type": "CEO Fraud / Wire Hijacking",
+      "severity": "CRITICAL",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Email Account Takeover / Executive Spoofing",
+      "platform": [
+        "Microsoft 365",
+        "Google Workspace",
+        "Email"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "bec scam",
+        "ceo fraud",
+        "executive impersonation",
+        "wire transfer scam",
+        "email takeover"
+      ],
+      "indicators": [
+        "Email from CEO requesting confidential wire transfer while 'in a meeting'",
+        "Strict request not to discuss with other managers"
+      ],
+      "how_to_identify": [
+        "High-value wire transfers should NEVER be authorized solely over email"
+      ],
+      "what_to_do": [
+        "Call CEO directly for voice confirmation",
+        "Notify bank immediately if wire sent"
+      ],
+      "prevention_tips": [
+        "Mandate Multi-Factor Authentication (MFA) on all business email accounts"
+      ],
+      "source": "FBI InfraGard / CERT-In BEC Advisory",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.907667",
+      "last_updated": "2026-09-27T07:05:22.907667",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_1f3c6c570eb95e95": {
+      "id": "threat_1f3c6c570eb95e95",
+      "title": "Ransomware Attack",
+      "description": "Malicious software encrypts small business servers, accounting databases, and customer records, demanding steep cryptocurrency ransoms for decryption keys.",
+      "threat_type": "Ransomware Extortion",
+      "severity": "CRITICAL",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Phishing Email Attachments / Exposed RDP Ports",
+      "platform": [
+        "Windows Server",
+        "Network Shares",
+        "Email"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "ransomware",
+        "data encrypted",
+        "bitcoin ransom",
+        "lockbit",
+        "server hack"
+      ],
+      "indicators": [
+        "Files appended with extensions like `.locked`, `.crypto`",
+        "Ransom note text file on desktop"
+      ],
+      "how_to_identify": [
+        "Inability to open database or accounting files accompanied by text note"
+      ],
+      "what_to_do": [
+        "Disconnect infected machine from network immediately",
+        "Do not pay ransom; restore from offline backup"
+      ],
+      "prevention_tips": [
+        "Maintain isolated 3-2-1 offline backups and disable unnecessary Remote Desktop (RDP) access"
+      ],
+      "source": "CISA Ransomware Guide",
+      "source_url": "https://www.cisa.gov/stopransomware",
+      "published_date": "2026-09-27T07:05:22.911969",
+      "last_updated": "2026-09-27T07:05:22.911969",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_7283c3d787264aad": {
+      "id": "threat_7283c3d787264aad",
+      "title": "Fake Payment Gateway",
+      "description": "Attacker scripts injected into small e-commerce websites redirect customers to cloned payment gateways, harvesting credit card details and CVVs.",
+      "threat_type": "Magecart / Web Skimming",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "JavaScript Web Skimming",
+      "platform": [
+        "WordPress",
+        "Shopify",
+        "WooCommerce",
+        "Web"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "payment gateway hack",
+        "credit card skimmer",
+        "magecart",
+        "e-commerce fraud",
+        "checkout hack"
+      ],
+      "indicators": [
+        "Checkout page URL switches to unauthorized third-party domain",
+        "Customer complaints of card fraud after purchase"
+      ],
+      "how_to_identify": [
+        "Audit checkout page scripts and SSL certificates regularly"
+      ],
+      "what_to_do": [
+        "Take e-commerce checkout offline for security inspection",
+        "Revoke compromised API keys"
+      ],
+      "prevention_tips": [
+        "Implement Content Security Policy (CSP) and file integrity monitoring on web servers"
+      ],
+      "source": "PCI-DSS Security Standard Council",
+      "source_url": "https://www.pcisecuritystandards.org",
+      "published_date": "2026-09-27T07:05:22.916196",
+      "last_updated": "2026-09-27T07:05:22.916196",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_2fa9721ff050b836": {
+      "id": "threat_2fa9721ff050b836",
+      "title": "Fake GST / Tax Notice Scam",
+      "description": "Business owners receive official-looking emails with attached password-protected PDFs claiming urgent GST or Income Tax audit non-compliance, deploying info-stealers upon opening.",
+      "threat_type": "Malware Delivery / Tax Phishing",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.97
+        }
+      ],
+      "attack_method": "Macro-Enabled PDF/Excel Malware Attachments",
+      "platform": [
+        "Email",
+        "Windows"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "gst scam",
+        "tax notice fraud",
+        "income tax phishing",
+        "malicious pdf",
+        "audit notice"
+      ],
+      "indicators": [
+        "Email attachment requires enabling macros or running an `.exe` installer",
+        "Sender domain not `@gst.gov.in`"
+      ],
+      "how_to_identify": [
+        "Official tax notices appear directly inside your authenticated GST/Income Tax portal dashboard"
+      ],
+      "what_to_do": [
+        "Do not enable macros or run attached files",
+        "Verify notice ID on official tax portal"
+      ],
+      "prevention_tips": [
+        "Log into official government tax portals directly to check compliance status"
+      ],
+      "source": "GSTN Security Advisory",
+      "source_url": "https://www.gst.gov.in",
+      "published_date": "2026-09-27T07:05:22.920213",
+      "last_updated": "2026-09-27T07:05:22.920213",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_cbda340ce90ebc1e": {
+      "id": "threat_cbda340ce90ebc1e",
+      "title": "Payroll Fraud",
+      "description": "Hackers use stolen credentials to compromise HR or accounting software, silently changing employee direct deposit bank details to external fraud accounts.",
+      "threat_type": "Payroll Redirection",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.95
+        }
+      ],
+      "attack_method": "Credential Harvesting / Account Takeover",
+      "platform": [
+        "HR Software",
+        "Cloud Accounting",
+        "Web"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "payroll fraud",
+        "direct deposit hack",
+        "hr software scam",
+        "salary theft"
+      ],
+      "indicators": [
+        "Employee reports missing salary transfer despite processed payroll",
+        "Logins from unfamiliar IP addresses in HR system"
+      ],
+      "how_to_identify": [
+        "Audit audit logs in payroll portal for recent bank account modifications"
+      ],
+      "what_to_do": [
+        "Freeze direct deposit disbursements",
+        "Reset HR credentials and enforce 2FA"
+      ],
+      "prevention_tips": [
+        "Require secondary manager approval for all employee direct deposit changes"
+      ],
+      "source": "TRINETRA Business CTI",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.924245",
+      "last_updated": "2026-09-27T07:05:22.924245",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_8c9fe5266ff745be": {
+      "id": "threat_8c9fe5266ff745be",
+      "title": "CEO / Executive Impersonation",
+      "description": "WhatsApp or SMS messages impersonate the business owner, asking office staff to buy electronic gift cards or crypto vouchers immediately for 'client appreciation gifts'.",
+      "threat_type": "Social Engineering / Vishing",
+      "severity": "MEDIUM",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.94
+        }
+      ],
+      "attack_method": "Messaging App Profile Impersonation",
+      "platform": [
+        "WhatsApp",
+        "SMS",
+        "Telegram"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "ceo gift card scam",
+        "executive spoof",
+        "apple card scam",
+        "urgent office request"
+      ],
+      "indicators": [
+        "Executive contacts staff from unknown number claiming to be in an urgent meeting",
+        "Asks to email gift card codes"
+      ],
+      "how_to_identify": [
+        "Business executives rarely request gift cards over messaging apps"
+      ],
+      "what_to_do": [
+        "Do not purchase gift cards",
+        "Verify via official office landline or internal chat"
+      ],
+      "prevention_tips": [
+        "Conduct regular employee security awareness training on social engineering"
+      ],
+      "source": "TRINETRA Business CTI",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.929115",
+      "last_updated": "2026-09-27T07:05:22.929115",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_cd43966368303867": {
+      "id": "threat_cd43966368303867",
+      "title": "Fake Supplier Website",
+      "description": "Fraudulent B2B ecommerce portals advertise heavily discounted industrial raw materials or office inventory, taking 100% advance wire transfers before disappearing.",
+      "threat_type": "B2B E-Commerce Fraud",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "Fake Wholesale Web Store",
+      "platform": [
+        "Web",
+        "B2B Marketplaces"
+      ],
+      "region": "National / Global",
+      "language": "English",
+      "keywords": [
+        "fake supplier",
+        "b2b fraud",
+        "wholesale scam",
+        "raw material scam",
+        "advance wire fraud"
+      ],
+      "indicators": [
+        "Prices significantly below market value",
+        "Only accepts wire transfers or crypto (no credit card/escrow)"
+      ],
+      "how_to_identify": [
+        "Check physical address, corporate registration numbers, and Whois domain creation date"
+      ],
+      "what_to_do": [
+        "Use verified trade escrow services for new international suppliers"
+      ],
+      "prevention_tips": [
+        "Perform background verification on new suppliers before sending advance wire payments"
+      ],
+      "source": "TRINETRA Business Protection",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.933229",
+      "last_updated": "2026-09-27T07:05:22.933229",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_690b769392ab48e4": {
+      "id": "threat_690b769392ab48e4",
+      "title": "Phishing Login Attack",
+      "description": "Employees receive emails pretending to be from Microsoft 365 or Google Workspace warning that their inbox is full, directing them to a fake login portal to harvest passwords.",
+      "threat_type": "Credential Harvesting",
+      "severity": "CRITICAL",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.98
+        }
+      ],
+      "attack_method": "Spoofed Cloud SaaS Login Page",
+      "platform": [
+        "Email",
+        "Microsoft 365",
+        "Google Workspace"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "m365 phishing",
+        "google login hack",
+        "inbox full scam",
+        "password harvesting",
+        "cloud hack"
+      ],
+      "indicators": [
+        "Login URL host is not `login.microsoftonline.com` or `accounts.google.com`",
+        "Sender address looks suspicious"
+      ],
+      "how_to_identify": [
+        "Check browser URL bar carefully before entering corporate credentials"
+      ],
+      "what_to_do": [
+        "Force password reset across company directory",
+        "Revoke active OAuth sessions"
+      ],
+      "prevention_tips": [
+        "Deploy FIDO2 Hardware Security Keys (YubiKey) or Authenticator apps for MFA"
+      ],
+      "source": "CISA Cloud Security Advisory",
+      "source_url": "https://www.cisa.gov",
+      "published_date": "2026-09-27T07:05:22.937217",
+      "last_updated": "2026-09-27T07:05:22.937217",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_ff72ac08d924419b": {
+      "id": "threat_ff72ac08d924419b",
+      "title": "Credential Theft",
+      "description": "Info-stealer malware (e.g. RedLine, Raccoon) infects employee personal computers, stealing saved browser passwords, cookies, and corporate VPN access keys.",
+      "threat_type": "Infostealer Malware",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.95
+        }
+      ],
+      "attack_method": "Browser Password Harvesting",
+      "platform": [
+        "Windows",
+        "Chrome",
+        "Edge"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "infostealer",
+        "browser password theft",
+        "vpn key leak",
+        "redline stealer",
+        "cookie hijacking"
+      ],
+      "indicators": [
+        "Corporate login logs show active session from distant international IP without MFA prompt"
+      ],
+      "how_to_identify": [
+        "Unauthorized session tokens detected in security log analysis"
+      ],
+      "what_to_do": [
+        "Revoke all session tokens",
+        "Enforce enterprise password manager usage"
+      ],
+      "prevention_tips": [
+        "Prohibit saving enterprise credentials inside web browser auto-complete"
+      ],
+      "source": "CERT-In Cyber Security Advisory",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.941262",
+      "last_updated": "2026-09-27T07:05:22.941262",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_966662d17c10a0d4": {
+      "id": "threat_966662d17c10a0d4",
+      "title": "Malware Through Business Documents",
+      "description": "Emails titled 'Purchase_Order_2026.docm' or 'RFQ_Specifications.zip' contain macro scripts that download Trojan backdoors onto office workstations.",
+      "threat_type": "Document Macro Payload",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "Malicious Office Macro / Zip Archive",
+      "platform": [
+        "Email",
+        "Microsoft Word",
+        "Excel"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "macro virus",
+        "rfq malware",
+        "purchase order scam",
+        "docm payload",
+        "zip Trojan"
+      ],
+      "indicators": [
+        "Document opens with banner asking to 'Enable Editing / Enable Content'",
+        "Sender email unknown"
+      ],
+      "how_to_identify": [
+        "Legitimate clients do not require enabling macros to view price quotes"
+      ],
+      "what_to_do": [
+        "Do not click 'Enable Content'",
+        "Scan file with Endpoint Detection software"
+      ],
+      "prevention_tips": [
+        "Disable Office Macros globally via Group Policy across company computers"
+      ],
+      "source": "TRINETRA Business CTI",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.947006",
+      "last_updated": "2026-09-27T07:05:22.947006",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_e2406a47c5fcef7d": {
+      "id": "threat_e2406a47c5fcef7d",
+      "title": "Fake Customer Refund Scam",
+      "description": "Fraudsters claim they were overcharged for a product, send a forged payment screenshot, and demand a refund through screen-sharing software, manipulating bank DOM values.",
+      "threat_type": "Refund Fraud / Screen Sharing Scam",
+      "severity": "MEDIUM",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.92
+        }
+      ],
+      "attack_method": "DOM Manipulation / Vishing",
+      "platform": [
+        "Phone Call",
+        "AnyDesk",
+        "Web"
+      ],
+      "region": "National",
+      "language": "English / Hindi",
+      "keywords": [
+        "refund scam",
+        "overpayment fraud",
+        "screen sharing scam",
+        "dom edit scam",
+        "merchant fraud"
+      ],
+      "indicators": [
+        "Customer demands screen sharing via AnyDesk to prove overpayment",
+        "Asks merchant to log into net banking while sharing screen"
+      ],
+      "how_to_identify": [
+        "Verify actual bank account statement directly; do not rely on customer screens"
+      ],
+      "what_to_do": [
+        "Disconnect screen sharing",
+        "Check official bank statement"
+      ],
+      "prevention_tips": [
+        "Process customer refunds exclusively through official payment gateway dashboards"
+      ],
+      "source": "TRINETRA Business Defense",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.951118",
+      "last_updated": "2026-09-27T07:05:22.951118",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_5bd7e3a6906a01dd": {
+      "id": "threat_5bd7e3a6906a01dd",
+      "title": "QR Code Payment Fraud",
+      "description": "Physical QR code stickers placed on small retail shop counters are secretly replaced with scammers' QR codes, diverting customer payments away from the business.",
+      "threat_type": "Physical Tampering / Payment Diversion",
+      "severity": "HIGH",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.97
+        },
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.85
+        }
+      ],
+      "attack_method": "Physical Counter QR Code Overlay",
+      "platform": [
+        "Physical Store Counter",
+        "UPI QR Codes"
+      ],
+      "region": "National",
+      "language": "Hindi / English / Regional",
+      "keywords": [
+        "qr code scam",
+        "counter qr fraud",
+        "upi diversion",
+        "retail payment scam",
+        "merchant qr hack"
+      ],
+      "indicators": [
+        "Counter QR sticker shows peeling or double layer",
+        "Payment audio confirmation speaker remains silent"
+      ],
+      "how_to_identify": [
+        "Inspect counter QR stand daily for physical overlay stickers"
+      ],
+      "what_to_do": [
+        "Replace tampered QR stand",
+        "Use official soundboxes (Paytm/PhonePe) for instant payment audio alerts"
+      ],
+      "prevention_tips": [
+        "Secure physical QR stands and rely on real-time audio confirmation speakers"
+      ],
+      "source": "NPCI Merchant Safety Guidelines",
+      "source_url": "https://www.npci.org.in",
+      "published_date": "2026-09-27T07:05:22.955231",
+      "last_updated": "2026-09-27T07:05:22.955231",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_545b5a084e2d1088": {
+      "id": "threat_545b5a084e2d1088",
+      "title": "Data Theft / Customer Database Theft",
+      "description": "Disgruntled employees or external hackers exfiltrate customer CRM lists, financial records, and proprietary designs to sell on dark web forums or extort the business.",
+      "threat_type": "Data Exfiltration / Insider Threat",
+      "severity": "CRITICAL",
+      "community": "SMALL_BUSINESS",
+      "target_communities": [
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.98
+        }
+      ],
+      "attack_method": "Unsanctioned USB Mass Storage / Cloud Upload",
+      "platform": [
+        "CRM Portal",
+        "Cloud Storage",
+        "Database"
+      ],
+      "region": "Global",
+      "language": "English",
+      "keywords": [
+        "data breach",
+        "customer database leak",
+        "crm theft",
+        "insider threat",
+        "dark web sell"
+      ],
+      "indicators": [
+        "Large volume download requests detected outside business hours",
+        "Data Loss Prevention (DLP) alerts"
+      ],
+      "how_to_identify": [
+        "Unusual database export activity in system audit logs"
+      ],
+      "what_to_do": [
+        "Revoke employee database access",
+        "Notify data protection regulatory authorities"
+      ],
+      "prevention_tips": [
+        "Enforce role-based access control (RBAC) and block USB storage on company laptops"
+      ],
+      "source": "CERT-In Data Privacy Advisory",
+      "source_url": "https://www.cert-in.org.in",
+      "published_date": "2026-09-27T07:05:22.959803",
+      "last_updated": "2026-09-27T07:05:22.959803",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_63029bcec5bc6d8a": {
+      "id": "threat_63029bcec5bc6d8a",
+      "title": "Local Language Phishing Scam",
+      "description": "Targeted phishing messages written in regional scripts (Hindi, Tamil, Marathi, Bengali, Telugu, Kannada, Gujarati) trick local residents into revealing banking credentials.",
+      "threat_type": "Regional Script Smishing",
+      "severity": "HIGH",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Localized Language Social Engineering",
+      "platform": [
+        "SMS",
+        "WhatsApp"
+      ],
+      "region": "State / Regional",
+      "language": "Hindi / Tamil / Bengali / Marathi / Telugu",
+      "keywords": [
+        "local language phishing",
+        "regional sms scam",
+        "regional bank fraud",
+        "vernacular phishing"
+      ],
+      "indicators": [
+        "SMS written in local script claiming urgent account block",
+        "Unofficial link included"
+      ],
+      "how_to_identify": [
+        "Local language messages asking for bank PIN or OTP are always fraudulent"
+      ],
+      "what_to_do": [
+        "Do not click links",
+        "Inform local community leaders and police helpline"
+      ],
+      "prevention_tips": [
+        "Verify local bank SMS with your local branch manager"
+      ],
+      "source": "TRINETRA Regional Intelligence",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.964854",
+      "last_updated": "2026-09-27T07:05:22.964854",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_82452473c604068e": {
+      "id": "threat_82452473c604068e",
+      "title": "Regional Festival Scam",
+      "description": "During regional cultural festivals (Diwali, Pongal, Durga Puja, Onam, Eid), fraudulent links promise 'Free Festival Gift Hampers' or '90% Off Sarees/Electronics', stealing payment data.",
+      "threat_type": "Festive Discount Phishing",
+      "severity": "HIGH",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.98
+        }
+      ],
+      "attack_method": "Fake Festive Lottery & E-commerce Site",
+      "platform": [
+        "WhatsApp",
+        "Facebook Ads",
+        "Web"
+      ],
+      "region": "Regional",
+      "language": "Regional / English",
+      "keywords": [
+        "festival scam",
+        "diwali offer fraud",
+        "pongal grant",
+        "durga puja gift",
+        "free gift hamper"
+      ],
+      "indicators": [
+        "WhatsApp message asking to forward link to 10 groups to claim gift",
+        "Fake scratch card on web page"
+      ],
+      "how_to_identify": [
+        "Forward-to-win wheel/lottery links on WhatsApp are 100% phishing traps"
+      ],
+      "what_to_do": [
+        "Do not forward the message to family groups",
+        "Warn group admins"
+      ],
+      "prevention_tips": [
+        "Shop only on verified e-commerce platforms during festive sales"
+      ],
+      "source": "TRINETRA Regional Safety",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.968868",
+      "last_updated": "2026-09-27T07:05:22.968868",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_c743228eef95c568": {
+      "id": "threat_c743228eef95c568",
+      "title": "Local Government Scheme Scam",
+      "description": "Fake web links promise local housing schemes, agricultural seed subsidies, or women welfare monthly stipends upon paying a \u20b9500 registration processing fee.",
+      "threat_type": "Welfare Scheme Fraud",
+      "severity": "HIGH",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Spoofed State Portal / WhatsApp Distribution",
+      "platform": [
+        "WhatsApp",
+        "SMS",
+        "Web"
+      ],
+      "region": "State / Regional",
+      "language": "Regional Script / Hindi",
+      "keywords": [
+        "housing scheme scam",
+        "farmer subsidy fraud",
+        "state welfare scam",
+        "free registration"
+      ],
+      "indicators": [
+        "Website URL ends in `.com` instead of `.gov.in`",
+        "Asks for UPI payment for government scheme"
+      ],
+      "how_to_identify": [
+        "Government welfare registrations are processed free or at official Common Service Centers (CSC)"
+      ],
+      "what_to_do": [
+        "Visit nearest CSC (Jan Seva Kendra) to verify genuine schemes"
+      ],
+      "prevention_tips": [
+        "Access state government schemes only via official state portal domain (`.gov.in`)"
+      ],
+      "source": "PIB State Fact Check",
+      "source_url": "https://pib.gov.in",
+      "published_date": "2026-09-27T07:05:22.972846",
+      "last_updated": "2026-09-27T07:05:22.972846",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_bbe1d07442bb950c": {
+      "id": "threat_bbe1d07442bb950c",
+      "title": "Fake Local Job Advertisement",
+      "description": "Fake classified ads in regional newspapers and local job portals promise government clerk or municipal jobs in exchange for advance medical or examination fees.",
+      "threat_type": "Regional Job Fraud",
+      "severity": "HIGH",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.96
+        },
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.8
+        }
+      ],
+      "attack_method": "Classified Ad Impersonation",
+      "platform": [
+        "Regional Newspapers",
+        "WhatsApp",
+        "Web"
+      ],
+      "region": "District / Regional",
+      "language": "Regional / Hindi",
+      "keywords": [
+        "local job scam",
+        "municipal recruitment",
+        "clerk job fraud",
+        "panchayat vacancy"
+      ],
+      "indicators": [
+        "Recruitment contact number is a personal mobile number",
+        "Demands cash deposit before interview"
+      ],
+      "how_to_identify": [
+        "Government municipal recruitments are announced via official gazette notifications"
+      ],
+      "what_to_do": [
+        "Do not pay recruitment fees",
+        "Report to local district collectorate"
+      ],
+      "prevention_tips": [
+        "Cross-check job ads on official district portal (`district.gov.in`)"
+      ],
+      "source": "TRINETRA Regional Intelligence",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.977613",
+      "last_updated": "2026-09-27T07:05:22.977613",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_8465472df8721a5f": {
+      "id": "threat_8465472df8721a5f",
+      "title": "Fake Regional Scholarship",
+      "description": "Scammers target rural and regional students promising state minority or merit scholarships, charging application processing fees via QR codes.",
+      "threat_type": "Scholarship Extortion",
+      "severity": "MEDIUM",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.95
+        },
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.9
+        }
+      ],
+      "attack_method": "Fake State Education Portal",
+      "platform": [
+        "WhatsApp",
+        "SMS"
+      ],
+      "region": "State",
+      "language": "Regional Script",
+      "keywords": [
+        "regional scholarship",
+        "state education grant",
+        "rural student grant",
+        "scholarship fee scam"
+      ],
+      "indicators": [
+        "Message received on WhatsApp asking for money to release scholarship"
+      ],
+      "how_to_identify": [
+        "State scholarships are disbursed directly into bank accounts without fee requirement"
+      ],
+      "what_to_do": [
+        "Report to school/college principal"
+      ],
+      "prevention_tips": [
+        "Verify scholarship eligibility at official state education office"
+      ],
+      "source": "State Cyber Cell Advisory",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.982057",
+      "last_updated": "2026-09-27T07:05:22.982057",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_0fcda3caaa5e0595": {
+      "id": "threat_0fcda3caaa5e0595",
+      "title": "Local Bank Impersonation Scam",
+      "description": "Vishing callers target regional co-operative and rural bank customers, speaking local dialect to gain trust before demanding OTP for account audit.",
+      "threat_type": "Co-operative Bank Vishing",
+      "severity": "CRITICAL",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.99
+        }
+      ],
+      "attack_method": "Dialect-based Vishing",
+      "platform": [
+        "Phone Call"
+      ],
+      "region": "District / Rural",
+      "language": "Regional Dialect",
+      "keywords": [
+        "cooperative bank scam",
+        "rural bank call",
+        "grameen bank fraud",
+        "dialect vishing"
+      ],
+      "indicators": [
+        "Caller claims your rural bank account is locked",
+        "Demands OTP sent to phone"
+      ],
+      "how_to_identify": [
+        "Rural bank staff will never ask for OTP or debit card PIN over phone"
+      ],
+      "what_to_do": [
+        "Disconnect call immediately",
+        "Visit local bank branch"
+      ],
+      "prevention_tips": [
+        "Keep your bank branch manager's contact number saved"
+      ],
+      "source": "NABARD Cyber Protection Advisory",
+      "source_url": "https://www.nabard.org",
+      "published_date": "2026-09-27T07:05:22.986681",
+      "last_updated": "2026-09-27T07:05:22.986681",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_35c355a1515e7989": {
+      "id": "threat_35c355a1515e7989",
+      "title": "Fake Electricity / Utility Bill Scam",
+      "description": "Urgent regional language SMS sent to municipal residents threatening power/water disconnection tonight unless a small pending charge is paid on a personal UPI number.",
+      "threat_type": "Regional Utility Smishing",
+      "severity": "CRITICAL",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.98
+        }
+      ],
+      "attack_method": "Urgency SMS / Personal UPI Request",
+      "platform": [
+        "SMS",
+        "WhatsApp"
+      ],
+      "region": "Municipal / District",
+      "language": "Regional Script",
+      "keywords": [
+        "electricity bill regional",
+        "water bill scam",
+        "disconnection notice",
+        "bijli office call"
+      ],
+      "indicators": [
+        "Personal 10-digit mobile number provided for payment",
+        "Panic-inducing night disconnection claim"
+      ],
+      "how_to_identify": [
+        "Municipal utility boards do not send disconnection SMS with personal numbers"
+      ],
+      "what_to_do": [
+        "Pay utility bills only through authorized municipal collection centers or official apps"
+      ],
+      "prevention_tips": [
+        "Ignore threat SMS and verify bill history on official utility portal"
+      ],
+      "source": "State Electricity Board Advisory",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:22.991985",
+      "last_updated": "2026-09-27T07:05:22.991985",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_7c71e2fe58505636": {
+      "id": "threat_7c71e2fe58505636",
+      "title": "Regional UPI Fraud",
+      "description": "Fraudsters visit local vegetable markets and small shops, showing fake UPI 'Payment Successful' screenshot videos without actually transferring funds.",
+      "threat_type": "Payment Screenshot Spoofing",
+      "severity": "MEDIUM",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.94
+        },
+        {
+          "community": "SMALL_BUSINESS",
+          "relevance_score": 0.88
+        }
+      ],
+      "attack_method": "Fake Paytm/GPay Screenshot Generator App",
+      "platform": [
+        "Physical Market",
+        "Fake App"
+      ],
+      "region": "Local / District",
+      "language": "Regional / Hindi",
+      "keywords": [
+        "fake upi screenshot",
+        "spoofed gpay video",
+        "market upi fraud",
+        "local seller scam"
+      ],
+      "indicators": [
+        "Customer shows phone screen rapidly and leaves before audio box confirmation"
+      ],
+      "how_to_identify": [
+        "Always check your OWN bank account SMS or audio speaker before handing over goods"
+      ],
+      "what_to_do": [
+        "Insist on waiting for audio alert confirmation"
+      ],
+      "prevention_tips": [
+        "Install UPI soundbox speaker at merchant counters"
+      ],
+      "source": "NPCI Local Safety Advisory",
+      "source_url": "https://www.npci.org.in",
+      "published_date": "2026-09-27T07:05:22.996763",
+      "last_updated": "2026-09-27T07:05:22.996763",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_dcc5050440793092": {
+      "id": "threat_dcc5050440793092",
+      "title": "Fake Local Business Advertisement",
+      "description": "Social media ads feature discounted local furniture, used vehicles, or electronic sales in the city, asking for advance token payments via UPI.",
+      "threat_type": "Classified Sale Fraud",
+      "severity": "MEDIUM",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.93
+        }
+      ],
+      "attack_method": "OLX / Facebook Market Token Money Scam",
+      "platform": [
+        "Facebook Marketplace",
+        "OLX",
+        "Instagram"
+      ],
+      "region": "City / Regional",
+      "language": "Regional / English",
+      "keywords": [
+        "local furniture sale",
+        "used bike scam",
+        "token money fraud",
+        "army personnel sale scam"
+      ],
+      "indicators": [
+        "Seller claims to be an Army Officer transferred urgently",
+        "Demands advance booking fee via UPI"
+      ],
+      "how_to_identify": [
+        "Never pay advance token money without inspecting the item in person"
+      ],
+      "what_to_do": [
+        "Meet seller in a safe public place before making any payment"
+      ],
+      "prevention_tips": [
+        "Inspect goods physically before making payments"
+      ],
+      "source": "TRINETRA Regional Safety",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:23.000867",
+      "last_updated": "2026-09-27T07:05:23.000867",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_f334db87f48a1c68": {
+      "id": "threat_f334db87f48a1c68",
+      "title": "Local Courier Scam",
+      "description": "SMS sent in local language claiming a parcel address is incomplete, requiring \u20b925 re-delivery fee payment on a phishing link that steals net banking PINs.",
+      "threat_type": "Parcel Smishing",
+      "severity": "HIGH",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.96
+        }
+      ],
+      "attack_method": "Phishing Delivery Fee Link",
+      "platform": [
+        "SMS",
+        "Web"
+      ],
+      "region": "Regional",
+      "language": "Regional Script / English",
+      "keywords": [
+        "courier address scam",
+        "postal delivery fee",
+        "regional parcel scam",
+        "indiapost scam"
+      ],
+      "indicators": [
+        "Link leads to non-official tracking domain",
+        "Demands \u20b925 payment"
+      ],
+      "how_to_identify": [
+        "India Post and major couriers do not ask for online re-delivery fees via SMS links"
+      ],
+      "what_to_do": [
+        "Do not enter card or net banking details"
+      ],
+      "prevention_tips": [
+        "Track parcels directly on India Post website (`indiapost.gov.in`)"
+      ],
+      "source": "India Post Cyber Advisory",
+      "source_url": "https://www.indiapost.gov.in",
+      "published_date": "2026-09-27T07:05:23.004778",
+      "last_updated": "2026-09-27T07:05:23.004778",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_bcbe8c44f6ce4247": {
+      "id": "threat_bcbe8c44f6ce4247",
+      "title": "Fake Government Officer Call",
+      "description": "Callers claim to be local police, revenue officers, or municipal inspectors demanding immediate payment for alleged building code or sanitation violations.",
+      "threat_type": "Official Extortion Vishing",
+      "severity": "HIGH",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.97
+        }
+      ],
+      "attack_method": "Authority Coercion Phone Call",
+      "platform": [
+        "Phone Call"
+      ],
+      "region": "District / City",
+      "language": "Regional Dialect / Hindi",
+      "keywords": [
+        "fake police call",
+        "municipal fine scam",
+        "tehsildar call",
+        "local government extortion"
+      ],
+      "indicators": [
+        "Demands immediate payment to personal UPI ID to avoid arrest or fine"
+      ],
+      "how_to_identify": [
+        "Real government fines are issued via official written notices with challan numbers"
+      ],
+      "what_to_do": [
+        "Refuse payment; ask for official challan copy at police station"
+      ],
+      "prevention_tips": [
+        "Verify official identity at local municipal office"
+      ],
+      "source": "State Police Cyber Cell",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:23.008732",
+      "last_updated": "2026-09-27T07:05:23.008732",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_bcdd76bb46e113d2": {
+      "id": "threat_bcdd76bb46e113d2",
+      "title": "Regional WhatsApp Scam",
+      "description": "Forwarded messages in regional script claim the government is distributing free laptops, smartphones, or \u20b95,000 monthly stipends to celebrate a national anniversary.",
+      "threat_type": "Viral Phishing Forward",
+      "severity": "MEDIUM",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.95
+        },
+        {
+          "community": "STUDENT",
+          "relevance_score": 0.75
+        }
+      ],
+      "attack_method": "Viral Social Forwarding Trap",
+      "platform": [
+        "WhatsApp"
+      ],
+      "region": "State / Regional",
+      "language": "Regional Script",
+      "keywords": [
+        "free laptop scam",
+        "regional whatsapp forward",
+        "free smartphone scam",
+        "viral scheme link"
+      ],
+      "indicators": [
+        "Requires sharing link with 5 WhatsApp groups to unlock prize"
+      ],
+      "how_to_identify": [
+        "Government schemes NEVER operate on 'share to 5 groups' mechanics!"
+      ],
+      "what_to_do": [
+        "Delete message and advise sender not to click"
+      ],
+      "prevention_tips": [
+        "Fact-check viral messages using PIB Fact Check"
+      ],
+      "source": "PIB Fact Check",
+      "source_url": "https://pib.gov.in",
+      "published_date": "2026-09-27T07:05:23.013210",
+      "last_updated": "2026-09-27T07:05:23.013210",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_66af5b9b34124088": {
+      "id": "threat_66af5b9b34124088",
+      "title": "Local Event / Ticket Scam",
+      "description": "Fake social media pages sell counterfeit VIP passes or tickets for local religious pilgrimages, cultural concerts, or sports tournaments.",
+      "threat_type": "Event Ticketing Fraud",
+      "severity": "MEDIUM",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.92
+        }
+      ],
+      "attack_method": "Spoofed Event Ticketing Page",
+      "platform": [
+        "Instagram",
+        "Facebook",
+        "Web"
+      ],
+      "region": "City / Regional",
+      "language": "Regional / English",
+      "keywords": [
+        "temple pass scam",
+        "darshan ticket fraud",
+        "concert ticket scam",
+        "pilgrimage pass"
+      ],
+      "indicators": [
+        "Payment directed to personal UPI ID rather than official temple trust domain"
+      ],
+      "how_to_identify": [
+        "Buy pilgrimage and event passes only from official temple trust web domains"
+      ],
+      "what_to_do": [
+        "Verify ticket authenticity at venue gate"
+      ],
+      "prevention_tips": [
+        "Avoid purchasing passes from third-party social media sellers"
+      ],
+      "source": "TRINETRA Regional Protection",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:23.017250",
+      "last_updated": "2026-09-27T07:05:23.017250",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_2c7745a8a05eef15": {
+      "id": "threat_2c7745a8a05eef15",
+      "title": "Regional Investment Scam",
+      "description": "Local unauthorized chit fund or collective investment schemes promise rural residents doubled money in 6 months, defaulting once funds reach critical mass.",
+      "threat_type": "Unregulated Chit Fund Scam",
+      "severity": "CRITICAL",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.98
+        },
+        {
+          "community": "SENIOR_CITIZEN",
+          "relevance_score": 0.85
+        }
+      ],
+      "attack_method": "Ponzi Multi-Level Marketing Trap",
+      "platform": [
+        "In-Person",
+        "WhatsApp"
+      ],
+      "region": "Rural / District",
+      "language": "Regional Dialect",
+      "keywords": [
+        "chit fund scam",
+        "money double scheme",
+        "local investment fraud",
+        "rural ponzi"
+      ],
+      "indicators": [
+        "Promises double returns without risk",
+        "No RBI/SEBI registration certificate"
+      ],
+      "how_to_identify": [
+        "Unregistered financial schemes promising returns over 12% are illegal ponzi traps"
+      ],
+      "what_to_do": [
+        "Report unauthorized money collectors to district police"
+      ],
+      "prevention_tips": [
+        "Invest savings in regulated banks or post office schemes"
+      ],
+      "source": "RBI Consumer Protection",
+      "source_url": "https://rbi.org.in",
+      "published_date": "2026-09-27T07:05:23.021205",
+      "last_updated": "2026-09-27T07:05:23.021205",
+      "status": "active",
+      "ai_processed": true
+    },
+    "threat_89156c1a4ba556c0": {
+      "id": "threat_89156c1a4ba556c0",
+      "title": "Local-language Social Media Scam",
+      "description": "Fake accounts of local politicians or regional celebrities ask followers for emergency donations for medical treatment or natural disaster relief.",
+      "threat_type": "Impersonation Donation Fraud",
+      "severity": "MEDIUM",
+      "community": "REGIONAL_COMMUNITY",
+      "target_communities": [
+        {
+          "community": "REGIONAL_COMMUNITY",
+          "relevance_score": 0.93
+        }
+      ],
+      "attack_method": "Celebrity Social Profile Impersonation",
+      "platform": [
+        "Facebook",
+        "Instagram",
+        "X (Twitter)"
+      ],
+      "region": "State",
+      "language": "Regional Script",
+      "keywords": [
+        "politician fake account",
+        "donation scam",
+        "celebrity impersonation",
+        "disaster fund scam"
+      ],
+      "indicators": [
+        "Account created recently without official blue verification badge",
+        "UPI ID is a personal phone number"
+      ],
+      "how_to_identify": [
+        "Check official verified handles of public figures"
+      ],
+      "what_to_do": [
+        "Donate only to official Chief Minister Relief Fund or PM Cares"
+      ],
+      "prevention_tips": [
+        "Verify donation campaigns through official government press releases"
+      ],
+      "source": "TRINETRA Regional Protection",
+      "source_url": "https://cybercrime.gov.in",
+      "published_date": "2026-09-27T07:05:23.025095",
+      "last_updated": "2026-09-27T07:05:23.025095",
+      "status": "active",
+      "ai_processed": true
+    }
+  },
+  "users": {
+    "user_9f7145b713ad": {
+      "id": "user_9f7145b713ad",
+      "name": "Validation Test User",
+      "email": "test_validation@trinetra.org",
+      "community": "SENIOR_CITIZEN",
+      "region": "National",
+      "language": "English",
+      "notification_preference": true,
+      "created_at": "2026-09-27T07:05:35.638832",
+      "updated_at": "2026-09-27T07:05:35.638832"
+    },
+    "user_6cecff7a2f34": {
+      "id": "user_6cecff7a2f34",
+      "name": "Ananya Sharma",
+      "email": "ananya_test@student.edu",
+      "community": "STUDENT",
+      "region": "Delhi",
+      "language": "English",
+      "notification_preference": true,
+      "created_at": "2026-09-27T07:22:02.560733",
+      "updated_at": "2026-09-27T07:22:02.560733"
+    },
+    "user_bd0e22ee8586": {
+      "id": "user_bd0e22ee8586",
+      "name": "Chikitha",
+      "email": "chikitha@gmail.com",
+      "community": "STUDENT",
+      "region": "National",
+      "language": "English",
+      "notification_preference": true,
+      "created_at": "2026-09-27T08:55:49.846021",
+      "updated_at": "2026-09-27T08:55:49.846021"
+    },
+    "user_46040c38d1cb": {
+      "id": "user_46040c38d1cb",
+      "name": "abcd",
+      "email": "abcd@gmail.com",
+      "community": "STUDENT",
+      "region": "National",
+      "language": "English",
+      "notification_preference": true,
+      "created_at": "2026-09-27T08:58:08.436314",
+      "updated_at": "2026-09-27T08:58:08.436314"
+    }
+  },
+  "reports": {
+    "report_4f4ecc376e": {
+      "id": "report_4f4ecc376e",
+      "user_id": "anonymous",
+      "community": "STUDENT",
+      "threat_type": "Fake Internship Scam",
+      "description": "Suspicious WhatsApp message asking for registration fee",
+      "platform": "WhatsApp",
+      "url_or_phone": "+91 9876543210",
+      "region": "Delhi",
+      "timestamp": "2026-09-27T07:22:02.536117",
+      "status": "pending"
+    },
+    "report_a32a15ac39": {
+      "id": "report_a32a15ac39",
+      "user_id": "anonymous",
+      "community": "STUDENT",
+      "threat_type": "Fake Internship Scam",
+      "description": "Suspicious WhatsApp message asking for registration fee",
+      "platform": "WhatsApp",
+      "url_or_phone": "+91 9876543210",
+      "region": "Delhi",
+      "timestamp": "2026-09-27T07:41:07.658773",
+      "status": "pending"
+    },
+    "report_bba4c60fd6": {
+      "id": "report_bba4c60fd6",
+      "user_id": "user_46040c38d1cb",
+      "community": "STUDENT",
+      "threat_type": "jjj",
+      "description": "dd",
+      "platform": "WhatsApp",
+      "url_or_phone": "9876543214",
+      "region": "Delhi",
+      "timestamp": "2026-09-27T08:59:59.451569",
+      "status": "pending"
+    },
+    "report_c9db0e4ac9": {
+      "id": "report_c9db0e4ac9",
+      "user_id": "student_user_1",
+      "community": "STUDENT",
+      "threat_type": "Fake Internship Scam",
+      "description": "Received suspicious offer asking for \u20b9500 fee.",
+      "platform": "WhatsApp",
+      "url_or_phone": "+91 9876543210",
+      "region": "Delhi",
+      "timestamp": "2026-09-27T09:37:09.628172",
+      "status": "pending"
+    },
+    "report_8f38c516cf": {
+      "id": "report_8f38c516cf",
+      "user_id": "student_user_1",
+      "community": "STUDENT",
+      "threat_type": "Fake Internship Scam",
+      "description": "Received suspicious offer asking for \u20b9500 fee.",
+      "platform": "WhatsApp",
+      "url_or_phone": "+91 9876543210",
+      "region": "Delhi",
+      "timestamp": "2026-09-27T09:37:39.130157",
+      "status": "pending"
+    }
+  },
+  "reviews": {
+    "rev_67a1955664": {
+      "id": "rev_67a1955664",
+      "threat_id": "threat_fake_internship",
+      "threat_title": "Fake Internship Scam",
+      "user_alias": "Concerned Student",
+      "community": "STUDENT",
+      "experience_text": "I got a similar internship message last week asking for payment.",
+      "platform": "WhatsApp",
+      "action_taken": "Reported & Blocked",
+      "timestamp": "2026-09-27T07:22:02.546481"
+    },
+    "rev_76487fa79b": {
+      "id": "rev_76487fa79b",
+      "threat_id": "threat_fake_internship",
+      "threat_title": "Fake Internship Scam",
+      "user_alias": "Concerned Student",
+      "community": "STUDENT",
+      "experience_text": "I got a similar internship message last week asking for payment.",
+      "platform": "WhatsApp",
+      "action_taken": "Reported & Blocked",
+      "timestamp": "2026-09-27T07:41:07.666821"
+    },
+    "rev_0036dc97fd": {
+      "id": "rev_0036dc97fd",
+      "threat_id": "threat_internship_1",
+      "threat_title": "Fake Internship Scam",
+      "user_alias": "Student Member",
+      "community": "STUDENT",
+      "experience_text": "I got an offer asking for fee, reported on TRINETRA.",
+      "platform": "WhatsApp",
+      "action_taken": "Reported & Blocked",
+      "timestamp": "2026-09-27T09:37:39.145776"
+    }
+  }
+}

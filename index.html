@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRINETRA — AI Cyber Threat Intelligence Platform</title>
+    <meta name="description" content="Community-centric AI-powered cyber threat intelligence platform delivering personalized cyber safety and proactive awareness.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#2F4156',
+                        teal: '#567C8D',
+                        skyblue: '#C8D9E6',
+                        beige: '#F5EFEB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Enterprise CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F5EFEB] text-[#2F4156] font-sans antialiased selection:bg-[#567C8D] selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- LEFT PERMANENT SIDEBAR (Visible ONLY when Authenticated) -->
+    <aside id="main-sidebar" class="fixed top-0 left-0 bottom-0 w-64 bg-[#2F4156] z-50 text-white flex flex-col justify-between p-6 transition-transform duration-300 -translate-x-full md:translate-x-0 hidden shadow-xl md:shadow-none border-r border-[#567C8D]/30">
+        <div>
+            <!-- Sidebar Brand Header -->
+            <div class="flex items-center space-x-3 cursor-pointer pb-6 border-b border-[#567C8D]/40" id="nav-brand">
+                <div class="w-10 h-10 rounded-lg bg-[#567C8D] flex items-center justify-center text-white font-bold text-xl shadow-sm shrink-0">
+                    <i class="fa-solid fa-eye text-[#C8D9E6]"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-wider text-white font-mono block">TRINETRA</span>
+                    <p class="text-[11px] text-[#C8D9E6] font-medium leading-tight mt-0.5">AI-Powered Community<br>Cyber Threat Intelligence</p>
+                </div>
+            </div>
+
+            <!-- Sidebar Vertical Navigation (6 Items Only, Ordered) -->
+            <nav class="mt-6 space-y-1.5">
+                <button class="nav-btn active" data-view="dashboard">
+                    <i class="fa-solid fa-chart-line"></i> <span>Personalized Feed</span>
+                </button>
+                <button class="nav-btn" data-view="threats">
+                    <i class="fa-solid fa-shield-halved"></i> <span>Threat Matrix</span>
+                </button>
+                <button class="nav-btn" data-view="assistant">
+                    <i class="fa-solid fa-robot"></i> <span>AI Assistant</span>
+                </button>
+                <button class="nav-btn" data-view="report">
+                    <i class="fa-solid fa-triangle-exclamation"></i> <span>Report Incident</span>
+                </button>
+                <button class="nav-btn" data-view="helplines">
+                    <i class="fa-solid fa-phone-volume"></i> <span>Helplines</span>
+                </button>
+                <button class="nav-btn" data-view="reviews">
+                    <i class="fa-solid fa-comments"></i> <span>Experiences</span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Sidebar Footer Status -->
+        <div class="pt-4 border-t border-[#567C8D]/40 text-xs text-[#C8D9E6] space-y-1 font-mono">
+            <div class="flex items-center space-x-2 text-[11px]">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Firestore CTI Connected</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT AREA (Offset by Sidebar Width on Desktop) -->
+    <div class="md:pl-64 flex flex-col min-h-screen">
+
+        <!-- TOP USER ACTION BAR (Visible ONLY when Authenticated) -->
+        <header id="main-topbar" class="sticky top-0 z-40 bg-white border-b border-[#C8D9E6] px-4 md:px-8 py-3 flex items-center justify-between shadow-sm hidden">
+            <!-- Mobile Sidebar Hamburger Toggle & App Title -->
+            <div class="flex items-center space-x-3">
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-[#2F4156] hover:text-[#567C8D] text-lg rounded-lg border border-[#C8D9E6] bg-[#F5EFEB]">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <span class="text-xs font-bold text-[#2F4156] tracking-wider font-mono hidden sm:inline-block">TRINETRA INTELLIGENCE PLATFORM</span>
+            </div>
+
+            <!-- RIGHT USER ACTIONS -->
+            <div class="flex items-center space-x-3">
+                <!-- Active Target Community Selector -->
+                <div class="relative">
+                    <label for="community-selector" class="sr-only">Switch Active Community</label>
+                    <div class="flex items-center bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-2.5 py-1.5 text-xs text-[#2F4156] font-medium">
+                        <i class="fa-solid fa-users text-[#567C8D] mr-2"></i>
+                        <span class="text-[#567C8D] mr-2 hidden sm:inline">Active Target:</span>
+                        <select id="community-selector" class="bg-transparent text-[#2F4156] font-semibold focus:outline-none cursor-pointer">
+                            <option value="STUDENT">Student</option>
+                            <option value="SENIOR_CITIZEN">Senior Citizen</option>
+                            <option value="SMALL_BUSINESS">Small Business</option>
+                            <option value="REGIONAL_COMMUNITY">Regional Community</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Notifications Bell -->
+                <button id="alert-bell-btn" class="relative p-2 rounded-lg bg-[#F5EFEB] border border-[#C8D9E6] text-[#2F4156] hover:bg-[#C8D9E6] transition">
+                    <i class="fa-solid fa-bell"></i>
+                    <span id="alert-badge" class="absolute -top-1 -right-1 bg-[#567C8D] text-white text-[10px] font-bold px-1.5 py-0.2 rounded-full hidden">0</span>
+                </button>
+
+                <!-- User Info Pill -->
+                <div class="hidden sm:flex items-center space-x-2 bg-[#F5EFEB] border border-[#C8D9E6] px-3 py-1.5 rounded-lg text-xs">
+                    <i class="fa-solid fa-circle-user text-[#567C8D] text-sm"></i>
+                    <span id="header-user-name" class="font-bold text-[#2F4156]">Cyber Citizen</span>
+                </div>
+
+                <!-- Logout Button -->
+                <button id="logout-btn" class="bg-[#567C8D] hover:bg-[#2F4156] text-white font-semibold text-xs px-3 py-1.5 rounded-lg transition flex items-center space-x-1">
+                    <i class="fa-solid fa-right-from-bracket mr-1"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTAINER -->
+        <main class="max-w-[1400px] w-full mx-auto px-4 md:px-8 py-6 flex-1">
+
+            <!-- VIEW 0: STANDALONE LOGIN / SIGN UP SCREEN -->
+            <section id="view-auth" class="view-section py-12 flex items-center justify-center min-h-[75vh]">
+                <div class="trinetra-card bg-white border border-[#C8D9E6] max-w-md w-full p-8 space-y-6 shadow-md relative overflow-hidden">
+                <!-- Brand Header -->
+                <div class="text-center space-y-2">
+                    <div class="w-14 h-14 mx-auto rounded-xl bg-[#2F4156] flex items-center justify-center text-white font-bold text-2xl shadow-sm">
+                        <i class="fa-solid fa-eye text-[#C8D9E6]"></i>
+                    </div>
+                    <h1 class="text-2xl font-extrabold tracking-wider text-[#2F4156] font-mono">TRINETRA</h1>
+                    <p class="text-xs text-[#567C8D] font-semibold uppercase tracking-widest">Community Cyber Threat Intelligence</p>
+                    <p class="text-xs text-[#567C8D]">Sign in to access your community-personalized cyber safety dashboard.</p>
+                </div>
+
+                <!-- Auth Error Alert Box -->
+                <div id="auth-error-alert" class="hidden p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-800 text-xs flex items-center space-x-2">
+                    <i class="fa-solid fa-circle-exclamation text-rose-600 shrink-0"></i>
+                    <span id="auth-error-text">Invalid login credentials</span>
+                </div>
+
+                <!-- Authentication Form -->
+                <form id="standalone-auth-form" class="space-y-4" onsubmit="event.preventDefault(); return false;">
+                    <div id="auth-field-name" class="hidden">
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Full Name</label>
+                        <input type="text" id="auth-input-name" placeholder="e.g. Ananya Sharma" class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3.5 py-2.5 text-sm text-[#2F4156] focus:outline-none focus:border-[#567C8D] transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Email Address</label>
+                        <input type="email" id="auth-input-email" placeholder="user@example.com" required class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3.5 py-2.5 text-sm text-[#2F4156] focus:outline-none focus:border-[#567C8D] transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Password</label>
+                        <input type="password" id="auth-input-password" placeholder="••••••••" required class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3.5 py-2.5 text-sm text-[#2F4156] focus:outline-none focus:border-[#567C8D] transition">
+                    </div>
+
+                    <div id="auth-field-community" class="hidden">
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Primary Community</label>
+                        <select id="auth-input-community" class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3.5 py-2.5 text-sm text-[#2F4156] focus:outline-none focus:border-[#567C8D] transition">
+                            <option value="STUDENT">Student Community</option>
+                            <option value="SENIOR_CITIZEN">Senior Citizen Community</option>
+                            <option value="SMALL_BUSINESS">Small Business Community</option>
+                            <option value="REGIONAL_COMMUNITY">Regional Community</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" id="auth-main-submit-btn" class="w-full bg-[#567C8D] hover:bg-[#2F4156] text-white font-bold py-3 rounded-lg text-sm transition shadow-sm flex items-center justify-center">
+                        <i class="fa-solid fa-right-to-bracket mr-2"></i> SIGN IN
+                    </button>
+                </form>
+
+                <div class="text-center text-xs text-[#567C8D] border-t border-[#C8D9E6] pt-4">
+                    <span id="auth-main-toggle-prompt">Don't have an account?</span>
+                    <button id="auth-main-toggle-btn" class="text-[#2F4156] font-bold hover:underline ml-1">Sign Up Now</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 1: PERSONALIZED COMMUNITY DASHBOARD -->
+        <section id="view-dashboard" class="view-section space-y-6 hidden">
+            <!-- Welcome Banner (Clean Header, No extra paragraph) -->
+            <div class="trinetra-card p-6 bg-white border border-[#C8D9E6] relative overflow-hidden">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center space-x-3">
+                            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#2F4156]">
+                                Welcome, <span id="dash-user-name" class="text-[#567C8D]">Cyber Citizen</span>
+                            </h1>
+                            <span id="dash-comm-badge" class="bg-[#C8D9E6] text-[#2F4156] border border-[#567C8D]/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider font-mono">
+                                STUDENT
+                            </span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button id="quick-verify-btn" class="bg-[#567C8D] hover:bg-[#2F4156] text-white font-semibold text-xs px-3.5 py-2 rounded-lg transition flex items-center">
+                            <i class="fa-solid fa-sync mr-2"></i> Refresh Feed
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DYNAMIC STATS COUNTERS & COMMUNITY TIP GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Stat 1: Total Relevant Threats -->
+                <div class="stat-card">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#567C8D] text-xs font-bold uppercase tracking-wider">Relevant Threats</span>
+                        <div class="w-8 h-8 rounded-lg bg-[#F5EFEB] text-[#2F4156] flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between">
+                        <span id="stat-total-count" class="text-3xl font-extrabold text-[#2F4156] font-mono">0</span>
+                        <span class="text-xs text-[#567C8D] font-medium">Community Filtered</span>
+                    </div>
+                    <p class="text-[11px] text-[#567C8D] mt-1">Verified CTI records</p>
+                </div>
+
+                <!-- Stat 2: Critical / High Priority -->
+                <div class="stat-card">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#567C8D] text-xs font-bold uppercase tracking-wider">High Priority</span>
+                        <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between">
+                        <span id="stat-high-count" class="text-3xl font-extrabold text-rose-700 font-mono">0</span>
+                        <span class="text-xs text-rose-700 font-medium">Action Needed</span>
+                    </div>
+                    <p class="text-[11px] text-[#567C8D] mt-1">Requires attention</p>
+                </div>
+
+                <!-- Stat 3: Medium / Low Priority -->
+                <div class="stat-card">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#567C8D] text-xs font-bold uppercase tracking-wider">Medium / Low</span>
+                        <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center text-sm">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                    </div>
+                    <div class="mt-2 flex items-baseline justify-between">
+                        <span id="stat-med-count" class="text-3xl font-extrabold text-amber-700 font-mono">0</span>
+                        <span class="text-xs text-amber-700 font-medium">Monitoring</span>
+                    </div>
+                    <p class="text-[11px] text-[#567C8D] mt-1">Advisory level threats</p>
+                </div>
+
+                <!-- Stat 4: Dynamic Safety Recommendation -->
+                <div class="stat-card border-l-4 border-l-[#567C8D] bg-white">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="text-[#567C8D] text-xs font-bold uppercase tracking-wider"><i class="fa-solid fa-lightbulb mr-1"></i> Community Tip</span>
+                        <span class="text-[10px] bg-[#F5EFEB] text-[#2F4156] px-1.5 py-0.5 rounded border border-[#C8D9E6]">Active</span>
+                    </div>
+                    <h4 id="safety-tip-title" class="text-xs font-bold text-[#2F4156] truncate">Verify Internships & Offers</h4>
+                    <p id="safety-tip-body" class="text-[11px] text-[#567C8D] mt-1 line-clamp-2">Never pay upfront registration fees for job offers or study grants.</p>
+                </div>
+            </div>
+
+            <!-- HIGH PRIORITY THREATS SECTION -->
+            <div class="space-y-4">
+                <div class="flex items-center justify-between border-b border-[#C8D9E6] pb-3">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-fire text-rose-600 text-lg"></i>
+                        <h2 class="text-lg font-bold text-[#2F4156]">High Priority Threats For You</h2>
+                    </div>
+                    <span class="text-xs text-[#567C8D] font-mono">Sorted by Severity & Relevance</span>
+                </div>
+
+                <div id="high-priority-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Dynamic Threat Cards Render Here -->
+                </div>
+            </div>
+
+            <!-- ALL RELEVANT THREATS FEED -->
+            <div class="space-y-4 pt-4">
+                <div class="flex items-center justify-between border-b border-[#C8D9E6] pb-3">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-list-check text-[#567C8D] text-lg"></i>
+                        <h2 class="text-lg font-bold text-[#2F4156]">Complete Community Feed</h2>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <label for="dash-filter-type" class="sr-only">Filter Threat Type</label>
+                        <select id="dash-filter-type" class="bg-white text-xs text-[#2F4156] border border-[#C8D9E6] rounded px-2.5 py-1">
+                            <option value="ALL">All Types</option>
+                            <option value="Phishing">Phishing & Scams</option>
+                            <option value="Fraud">Financial Fraud</option>
+                            <option value="Malware">Malware & Ransomware</option>
+                            <option value="Impersonation">Impersonation</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="all-threats-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Threat Cards Render Here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 2: GLOBAL THREAT SEARCH & MATRIX -->
+        <section id="view-threats" class="view-section space-y-6 hidden">
+            <div class="trinetra-card p-6 bg-white border border-[#C8D9E6]">
+                <h2 class="text-xl font-bold text-[#2F4156] mb-1 flex items-center"><i class="fa-solid fa-shield-halved text-[#567C8D] mr-2"></i> Threat Matrix</h2>
+                <p class="text-sm text-[#567C8D] mb-6">Explore and search community-specific cyber threats.</p>
+
+                <!-- Search Input Bar -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+                    <div class="md:col-span-2 relative">
+                        <i class="fa-solid fa-search absolute left-3.5 top-3 text-[#567C8D]"></i>
+                        <label for="search-input" class="sr-only">Search Threat Intelligence</label>
+                        <input type="text" id="search-input" placeholder="Search threats by keyword, title, or platform..." class="w-full pl-10 pr-4 py-2.5 bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg text-sm text-[#2F4156] placeholder-[#567C8D]/70 focus:outline-none focus:border-[#567C8D] transition">
+                    </div>
+                    <div>
+                        <label for="filter-community" class="sr-only">Filter Community</label>
+                        <select id="filter-community" class="w-full py-2.5 px-3 bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg text-sm text-[#2F4156] focus:outline-none focus:border-[#567C8D]">
+                            <option value="ALL">All Communities</option>
+                            <option value="STUDENT">Student Community</option>
+                            <option value="SENIOR_CITIZEN">Senior Citizen Community</option>
+                            <option value="SMALL_BUSINESS">Small Business Community</option>
+                            <option value="REGIONAL_COMMUNITY">Regional Community</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="filter-severity" class="sr-only">Filter Severity</label>
+                        <select id="filter-severity" class="w-full py-2.5 px-3 bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg text-sm text-[#2F4156] focus:outline-none focus:border-[#567C8D]">
+                            <option value="ALL">All Severities</option>
+                            <option value="CRITICAL">Critical</option>
+                            <option value="HIGH">High</option>
+                            <option value="MEDIUM">Medium</option>
+                            <option value="LOW">Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search Results Counter & Grid -->
+            <div class="flex items-center justify-between">
+                <span id="search-result-count" class="text-sm font-semibold text-[#2F4156]">Showing Threats</span>
+                <button id="reset-filters-btn" class="text-xs text-[#567C8D] hover:underline font-bold"><i class="fa-solid fa-undo mr-1"></i> Reset Filters</button>
+            </div>
+
+            <div id="search-results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <!-- Search Result Threat Cards -->
+            </div>
+        </section>
+
+        <!-- VIEW 3: COMMUNITY-AWARE AI CYBERSECURITY ASSISTANT -->
+        <section id="view-assistant" class="view-section space-y-6 hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Chat Left Sidebar: Quick Prompts -->
+                <div class="trinetra-card p-5 bg-white border border-[#C8D9E6] space-y-4">
+                    <div class="flex items-center space-x-3 border-b border-[#C8D9E6] pb-3">
+                        <div class="w-9 h-9 rounded-lg bg-[#2F4156] text-white flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-bold text-[#2F4156]">AI Assistant</h3>
+                            <p class="text-xs text-[#567C8D]">Community-aware cyber threat assistance</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F5EFEB] p-3.5 rounded-lg border border-[#C8D9E6]">
+                        <span class="text-xs text-[#567C8D] font-bold uppercase tracking-wider block mb-1">Active Persona Context</span>
+                        <div class="flex items-center justify-between">
+                            <span id="chat-active-comm" class="text-sm font-bold text-[#2F4156]">Student</span>
+                            <span class="text-[10px] bg-[#C8D9E6] text-[#2F4156] px-2 py-0.5 rounded font-mono font-semibold">Active</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <span class="text-xs text-[#567C8D] font-bold uppercase tracking-wider block">Suggested Questions</span>
+                        <button class="chat-preset-btn w-full text-left p-2.5 rounded-lg bg-[#F5EFEB] hover:bg-[#C8D9E6] text-xs text-[#2F4156] border border-[#C8D9E6] transition font-medium">
+                            "I got an internship offer asking for ₹500 fee."
+                        </button>
+                        <button class="chat-preset-btn w-full text-left p-2.5 rounded-lg bg-[#F5EFEB] hover:bg-[#C8D9E6] text-xs text-[#2F4156] border border-[#C8D9E6] transition font-medium">
+                            "Bank called saying my KYC expired and asking for OTP."
+                        </button>
+                        <button class="chat-preset-btn w-full text-left p-2.5 rounded-lg bg-[#F5EFEB] hover:bg-[#C8D9E6] text-xs text-[#2F4156] border border-[#C8D9E6] transition font-medium">
+                            "Received an urgent invoice change request via email."
+                        </button>
+                        <button class="chat-preset-btn w-full text-left p-2.5 rounded-lg bg-[#F5EFEB] hover:bg-[#C8D9E6] text-xs text-[#2F4156] border border-[#C8D9E6] transition font-medium">
+                            "SMS says electricity bill unpaid and power cut tonight."
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat Main Window -->
+                <div class="lg:col-span-2 trinetra-card bg-white border border-[#C8D9E6] flex flex-col h-[600px]">
+                    <div class="p-4 border-b border-[#C8D9E6] flex items-center justify-between bg-[#F5EFEB]">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+                            <span class="text-sm font-bold text-[#2F4156]">TRINETRA AI Safeguard</span>
+                        </div>
+                        <span class="text-xs text-[#567C8D] font-mono">Gemini AI Engine</span>
+                    </div>
+
+                    <!-- Chat Messages Stream -->
+                    <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 rounded-full bg-[#2F4156] text-white flex items-center justify-center shrink-0 text-sm">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <div class="bg-[#F5EFEB] border border-[#C8D9E6] text-[#2F4156] p-3.5 rounded-2xl rounded-tl-none max-w-xl text-sm leading-relaxed">
+                                Hello! I am your TRINETRA AI Assistant. Ask me anything about cybersecurity, scams, digital safety, or any general question. How can I help you today?
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input Box -->
+                    <form id="chat-form" class="p-3 border-t border-[#C8D9E6] bg-[#F5EFEB] flex items-center space-x-2">
+                        <input type="text" id="chat-input" placeholder="Ask anything about cybersecurity or enter your question..." class="flex-1 bg-white border border-[#C8D9E6] rounded-lg px-4 py-2.5 text-sm text-[#2F4156] placeholder-[#567C8D]/70 focus:outline-none focus:border-[#567C8D]">
+                        <button type="submit" class="bg-[#567C8D] hover:bg-[#2F4156] text-white font-bold px-4 py-2.5 rounded-lg text-sm transition flex items-center">
+                            <i class="fa-solid fa-paper-plane mr-1.5"></i> Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 4: INCIDENT REPORTING -->
+        <section id="view-report" class="view-section space-y-6 hidden">
+            <div class="max-w-2xl mx-auto trinetra-card p-6 bg-white border border-[#C8D9E6] space-y-6">
+                <div class="border-b border-[#C8D9E6] pb-4">
+                    <h2 class="text-xl font-bold text-[#2F4156] flex items-center">
+                        <i class="fa-solid fa-triangle-exclamation text-[#567C8D] mr-2"></i> Report Suspicious Cyber Incident
+                    </h2>
+                    <p class="text-xs text-[#567C8D] mt-1">Help protect your community by reporting suspicious links, calls, or job scams. All reports are logged securely.</p>
+                </div>
+
+                <form id="report-form" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Target Community</label>
+                        <select id="report-community" class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3 py-2 text-sm text-[#2F4156]">
+                            <option value="STUDENT">Student Community</option>
+                            <option value="SENIOR_CITIZEN">Senior Citizen Community</option>
+                            <option value="SMALL_BUSINESS">Small Business Community</option>
+                            <option value="REGIONAL_COMMUNITY">Regional Community</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Incident / Threat Type</label>
+                        <input type="text" id="report-threat-type" placeholder="e.g. Fake Internship Scam, UPI OTP Call, Fake Invoice" required class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3 py-2 text-sm text-[#2F4156]">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Platform Used by Scammer</label>
+                        <select id="report-platform" class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3 py-2 text-sm text-[#2F4156]">
+                            <option value="WhatsApp">WhatsApp</option>
+                            <option value="Telegram">Telegram</option>
+                            <option value="Phone Call">Phone Call / Vishing</option>
+                            <option value="SMS">SMS / Text Message</option>
+                            <option value="Email">Email</option>
+                            <option value="Web">Website / Fake Portal</option>
+                            <option value="Social Media">Instagram / Facebook</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Suspicious URL / Phone Number</label>
+                        <input type="text" id="report-url-phone" placeholder="e.g. +91 9876543210 or http://fake-internship.xyz" class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3 py-2 text-sm text-[#2F4156]">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Detailed Description of Incident</label>
+                        <textarea id="report-desc" rows="4" placeholder="Describe what happened, what message was sent, or what amount was demanded..." required class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded-lg px-3 py-2 text-sm text-[#2F4156]"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-[#567C8D] hover:bg-[#2F4156] text-white font-bold py-2.5 rounded-lg text-sm transition flex items-center justify-center">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Submit Threat Report
+                    </button>
+                </form>
+
+                <div id="report-success-msg" class="hidden p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm">
+                    <i class="fa-solid fa-check-circle mr-2"></i> Incident report successfully logged!
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 5: HELPLINES & EMERGENCY ASSISTANCE -->
+        <section id="view-helplines" class="view-section space-y-6 hidden">
+            <div class="trinetra-card p-6 bg-white border border-[#C8D9E6]">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-xl font-bold text-[#2F4156] mb-1 flex items-center"><i class="fa-solid fa-phone-volume text-[#567C8D] mr-2"></i> Helplines</h2>
+                        <p class="text-sm text-[#567C8D]">Find relevant cybercrime reporting and support contacts.</p>
+                    </div>
+                    <span id="helpline-comm-badge" class="bg-[#C8D9E6] text-[#2F4156] border border-[#567C8D]/30 text-xs font-bold px-3 py-1.5 rounded-full font-mono self-start md:self-auto">
+                        <i class="fa-solid fa-users text-[#567C8D] mr-1.5"></i> Recommended for Student
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <div class="trinetra-card p-5 bg-white border border-[#C8D9E6] space-y-3 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold text-[#567C8D] uppercase tracking-wider">National Helpline</span>
+                                <span class="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded font-mono font-bold">24x7 TOLL FREE</span>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-[#2F4156] font-mono mb-1">1930</h3>
+                            <p class="text-xs text-[#567C8D]">National Cyber Crime Financial Fraud Helpline. Call immediately if money was fraudulently debited.</p>
+                        </div>
+                        <div class="pt-3 border-t border-[#C8D9E6]">
+                            <a href="tel:1930" class="inline-flex items-center justify-center w-full px-4 py-2 rounded-lg bg-[#567C8D] hover:bg-[#2F4156] text-white text-xs font-bold transition">
+                                <i class="fa-solid fa-phone mr-2"></i> CALL 1930
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="trinetra-card p-5 bg-white border border-[#C8D9E6] space-y-3 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-[#567C8D] uppercase tracking-wider block mb-2">Official Portal</span>
+                            <h3 class="text-lg font-bold text-[#2F4156] mb-1">Cybercrime Reporting Portal</h3>
+                            <p class="text-xs text-[#567C8D]">Ministry of Home Affairs official portal for lodging cyber crime complaints.</p>
+                        </div>
+                        <div class="pt-3 border-t border-[#C8D9E6]">
+                            <a href="https://cybercrime.gov.in" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 rounded-lg bg-[#567C8D] hover:bg-[#2F4156] text-white text-xs font-bold transition">
+                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> VIEW PORTAL
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="trinetra-card p-5 bg-white border border-[#C8D9E6] space-y-3 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-[#567C8D] uppercase tracking-wider block mb-2">Senior Citizen Helpline</span>
+                            <h3 class="text-2xl font-extrabold text-[#2F4156] font-mono mb-1">14567</h3>
+                            <p class="text-xs text-[#567C8D]">Elderline National Helpline for Senior Citizens for guidance and support.</p>
+                        </div>
+                        <div class="pt-3 border-t border-[#C8D9E6]">
+                            <a href="tel:14567" class="inline-flex items-center justify-center w-full px-4 py-2 rounded-lg bg-[#567C8D] hover:bg-[#2F4156] text-white text-xs font-bold transition">
+                                <i class="fa-solid fa-phone mr-2"></i> CALL 14567
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="trinetra-card p-5 bg-white border border-[#C8D9E6] space-y-3 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-[#567C8D] uppercase tracking-wider block mb-2">Banking & UPI Fraud</span>
+                            <h3 class="text-lg font-bold text-[#2F4156] mb-1">RBI Sachet Portal</h3>
+                            <p class="text-xs text-[#567C8D]">Report illegal deposit schemes, unauthorized financial entities, and UPI scams.</p>
+                        </div>
+                        <div class="pt-3 border-t border-[#C8D9E6]">
+                            <a href="https://sachet.rbi.org.in" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 rounded-lg bg-[#567C8D] hover:bg-[#2F4156] text-white text-xs font-bold transition">
+                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> VIEW PORTAL
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="trinetra-card p-5 bg-white border border-[#C8D9E6] space-y-3 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-[#567C8D] uppercase tracking-wider block mb-2">Telecom Block Portal</span>
+                            <h3 class="text-lg font-bold text-[#2F4156] mb-1">DoT Sanchar Saathi</h3>
+                            <p class="text-xs text-[#567C8D]">Block lost/stolen mobile phones and check mobile connections registered under your name.</p>
+                        </div>
+                        <div class="pt-3 border-t border-[#C8D9E6]">
+                            <a href="https://sancharsaathi.gov.in" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 rounded-lg bg-[#567C8D] hover:bg-[#2F4156] text-white text-xs font-bold transition">
+                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> VIEW PORTAL
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="trinetra-card p-5 bg-white border border-[#C8D9E6] space-y-3 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-[#567C8D] uppercase tracking-wider block mb-2">CERT-In Emergency</span>
+                            <h3 class="text-lg font-bold text-[#2F4156] mb-1">CERT-In Incident Reporting</h3>
+                            <p class="text-xs text-[#567C8D]">Report major enterprise cyber security incidents, ransomware, and vulnerabilities.</p>
+                        </div>
+                        <div class="pt-3 border-t border-[#C8D9E6]">
+                            <a href="https://www.cert-in.org.in" target="_blank" class="inline-flex items-center justify-center w-full px-4 py-2 rounded-lg bg-[#567C8D] hover:bg-[#2F4156] text-white text-xs font-bold transition">
+                                <i class="fa-solid fa-arrow-up-right-from-square mr-2"></i> VIEW PORTAL
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 6: COMMUNITY EXPERIENCES & REVIEWS -->
+        <section id="view-reviews" class="view-section space-y-6 hidden">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-[#C8D9E6] pb-4">
+                <div>
+                    <h2 class="text-xl font-bold text-[#2F4156] flex items-center">
+                        <i class="fa-solid fa-comments text-[#567C8D] mr-2"></i> Experiences
+                    </h2>
+                    <p class="text-xs text-[#567C8D] mt-1">Learn from real cyber incident experiences and share your own.</p>
+                </div>
+                <button id="open-share-exp-btn" class="bg-[#567C8D] hover:bg-[#2F4156] text-white font-bold text-xs px-4 py-2.5 rounded-lg transition">
+                    <i class="fa-solid fa-plus mr-1.5"></i> Share Experience
+                </button>
+            </div>
+
+            <div id="reviews-feed" class="space-y-4">
+                <!-- Reviews rendered here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- THREAT DETAILS MODAL -->
+    <div id="threat-modal" class="fixed inset-0 z-50 bg-[#2F4156]/50 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="trinetra-card bg-white border border-[#C8D9E6] max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
+            <!-- Modal Header -->
+            <div class="p-5 border-b border-[#C8D9E6] flex items-start justify-between bg-[#F5EFEB]">
+                <div>
+                    <div class="flex items-center space-x-2 mb-2">
+                        <span id="modal-sev-badge" class="badge-critical">CRITICAL</span>
+                        <span id="modal-comm-tag" class="bg-[#C8D9E6] text-[#2F4156] text-xs px-2.5 py-0.5 rounded font-mono font-semibold">STUDENT</span>
+                        <span id="modal-platform" class="text-xs text-[#567C8D] font-mono">WhatsApp</span>
+                    </div>
+                    <h3 id="modal-title" class="text-xl font-bold text-[#2F4156]">Fake Internship Scam</h3>
+                </div>
+                <button id="close-modal-btn" class="text-[#567C8D] hover:text-[#2F4156] text-lg p-1">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 overflow-y-auto space-y-6 text-sm text-[#2F4156]">
+                <!-- Threat Description -->
+                <div>
+                    <h4 class="text-xs font-bold text-[#567C8D] uppercase tracking-wider mb-2">What is happening?</h4>
+                    <p id="modal-description" class="text-[#2F4156] leading-relaxed">Detailed threat explanation...</p>
+                </div>
+
+                <!-- Attack Method & Indicators -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-[#F5EFEB] p-4 rounded-lg border border-[#C8D9E6] space-y-2">
+                        <h4 class="text-xs font-bold text-rose-700 uppercase tracking-wider"><i class="fa-solid fa-bug mr-1"></i> Attack Method</h4>
+                        <p id="modal-method" class="text-xs text-[#2F4156]">Social Engineering / Phishing</p>
+                    </div>
+                    <div class="bg-[#F5EFEB] p-4 rounded-lg border border-[#C8D9E6] space-y-2">
+                        <h4 class="text-xs font-bold text-amber-700 uppercase tracking-wider"><i class="fa-solid fa-flag mr-1"></i> Red Flags & Indicators</h4>
+                        <ul id="modal-indicators" class="text-xs text-[#2F4156] list-disc list-inside space-y-1">
+                            <li>Indicator 1</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- How to Identify -->
+                <div class="bg-[#F5EFEB] p-4 rounded-lg border border-[#C8D9E6]">
+                    <h4 class="text-xs font-bold text-[#567C8D] uppercase tracking-wider mb-2"><i class="fa-solid fa-magnifying-glass-location mr-1"></i> How can you identify it?</h4>
+                    <ul id="modal-identify" class="list-disc list-inside space-y-1 text-[#2F4156]">
+                        <li>Step 1</li>
+                    </ul>
+                </div>
+
+                <!-- Response & Action Steps -->
+                <div class="bg-emerald-50 p-4 rounded-lg border border-emerald-200">
+                    <h4 class="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-2"><i class="fa-solid fa-check-shield mr-1"></i> What should you do?</h4>
+                    <ul id="modal-action" class="list-disc list-inside space-y-1 text-emerald-900 font-medium">
+                        <li>Action 1</li>
+                    </ul>
+                </div>
+
+                <!-- Prevention Tips -->
+                <div>
+                    <h4 class="text-xs font-bold text-[#567C8D] uppercase tracking-wider mb-2">Proactive Prevention Tips</h4>
+                    <ul id="modal-prevention" class="list-disc list-inside space-y-1 text-[#2F4156]">
+                        <li>Tip 1</li>
+                    </ul>
+                </div>
+
+                <!-- Source Metadata -->
+                <div class="pt-4 border-t border-[#C8D9E6] flex items-center justify-between text-xs text-[#567C8D] font-mono">
+                    <span>Source: <strong id="modal-source" class="text-[#2F4156]">CERT-In</strong></span>
+                    <span>Last Updated: <strong id="modal-date" class="text-[#2F4156]">Recent</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SHARE EXPERIENCE MODAL -->
+    <div id="experience-modal" class="fixed inset-0 z-50 bg-[#2F4156]/50 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="trinetra-card bg-white border border-[#C8D9E6] max-w-lg w-full p-6 space-y-4">
+            <div class="flex items-center justify-between border-b border-[#C8D9E6] pb-3">
+                <h3 class="text-lg font-bold text-[#2F4156]">Share Victim Experience / Review</h3>
+                <button id="close-exp-modal-btn" class="text-[#567C8D] hover:text-[#2F4156]"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <form id="exp-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Your Alias (Anonymous)</label>
+                    <input type="text" id="exp-alias" value="Cyber Citizen" class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded px-3 py-2 text-sm text-[#2F4156]">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Threat Title</label>
+                    <input type="text" id="exp-threat-title" placeholder="e.g. Fake Internship Scam" required class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded px-3 py-2 text-sm text-[#2F4156]">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-[#2F4156] uppercase tracking-wider mb-1">Your Experience Story</label>
+                    <textarea id="exp-text" rows="4" placeholder="Share how you encountered this threat and what warning you have for others..." required class="w-full bg-[#F5EFEB] border border-[#C8D9E6] rounded px-3 py-2 text-sm text-[#2F4156]"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#567C8D] hover:bg-[#2F4156] text-white font-bold py-2.5 rounded text-sm transition">
+                    Post Experience
+                </button>
+            </form>
+        </div>
+    </div>
+
+        <!-- FOOTER (Visible ONLY when Authenticated) -->
+        <footer id="main-footer" class="bg-white border-t border-[#C8D9E6] py-5 px-6 text-xs text-[#567C8D] hidden mt-auto">
+            <div class="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div class="flex items-center space-x-2">
+                    <span class="font-bold text-[#2F4156] font-mono">TRINETRA</span>
+                    <span>— Community Cyber Threat Intelligence Platform</span>
+                </div>
+                <div class="flex items-center space-x-4 text-[#567C8D]">
+                    <span>AI-Powered Safety</span>
+                    <span>Community Protection</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- App JavaScript Modules -->
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
